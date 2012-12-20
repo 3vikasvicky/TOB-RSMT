@@ -1,0 +1,5 @@
+Delay at Node1(10, 25) is 893.5
+Delay at Node2(75, 45) is 1670
+Delay at Node3(40, 25) is 467.5
+Delay at Node4(80, 25) is 1307.5
+Delay at Node5(80, 40) is 1600

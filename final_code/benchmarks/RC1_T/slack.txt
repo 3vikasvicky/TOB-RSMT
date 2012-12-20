@@ -1,0 +1,21 @@
+Start
+Location:1310,9000
+Slack:-89997.2
+Location:2300,1140
+Slack:-532645
+Location:4800,7460
+Slack:-172047
+Location:7130,6340
+Slack:-350933
+Location:7240,4470
+Slack:-444555
+Location:9170,3120
+Slack:-603288
+Location:7310,200
+Slack:-659213
+Location:7690,1200
+Slack:-630721
+Location:9140,7080
+Slack:-413785
+WNS_Position:7310, 200
+WNS:-659213

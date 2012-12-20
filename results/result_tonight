@@ -1,0 +1,7 @@
+RC8
+The min slew is 154.354. The max slew is 681247. The slew spec is 136373
+Under 0 mode, Root has 1 solutions
+They have c, w, s as:
+483 282 126015
+omit_mode_buffering_cpu_time is 0.11
+Adaptive propagating on node 699 with 1 total solutions

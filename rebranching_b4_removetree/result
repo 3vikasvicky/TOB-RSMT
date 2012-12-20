@@ -1,0 +1,1122 @@
+RC1
+The min slew is 5.39995e+07. The max slew is 3.33094e+08. The slew spec is 1.09818e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+942 3 974865
+1 4 0
+5953 2 3.89218e+07
+1 3 0
+13324 1 6.35891e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7240.000000 6197.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+942 3 974865
+1 4 0
+5953 2 3.89218e+07
+1 3 0
+13323 1 6.35757e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7240.000000 6196.000000
+The min slew is 5.39995e+07. The max slew is 3.33094e+08. The slew spec is 1.93547e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+942 3 974865
+1 4 0
+5470 2 2.79208e+07
+1 3 0
+10481 1 4.82739e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7240.000000 3354.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+942 3 974865
+1 4 0
+5468 2 2.7908e+07
+1 3 0
+10479 1 4.82698e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7240.000000 3352.000000
+The min slew is 5.39995e+07. The max slew is 3.33094e+08. The slew spec is 2.77275e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+942 3 974865
+1 4 0
+1432 2 2.20799e+06
+1 3 0
+6443 1 3.99339e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7310.000000 1248.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+942 3 974865
+1 4 0
+1430 2 2.2036e+06
+1 3 0
+6441 1 3.99297e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7310.000000 1246.000000
+RC2
+The min slew is 1.17828e+08. The max slew is 8.15639e+08. The slew spec is 2.5739e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+671 2 494639
+1 3 0
+17583 1 2.13323e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 5090.000000 3462.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+673 2 497592
+1 3 0
+17622 1 2.14153e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 5090.000000 3470.000000
+The min slew is 1.17828e+08. The max slew is 8.15639e+08. The slew spec is 4.66734e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+671 2 494639
+1 3 0
+7858 1 3.5767e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3041.000000 2160.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+673 2 497592
+1 3 0
+7888 1 3.60604e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3056.000000 2160.000000
+The min slew is 1.17828e+08. The max slew is 8.15639e+08. The slew spec is 6.76077e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+671 2 494639
+1 3 0
+3714 1 1.35215e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1220.000000 1181.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+673 2 497592
+1 3 0
+3741 1 1.36342e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1220.000000 1200.000000
+RC3
+The min slew is 8.33225e+07. The max slew is 8.50497e+08. The slew spec is 2.36757e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+722 4 572685
+1 5 0
+1083 3 1.28775e+06
+1 4 0
+5782 2 1.87833e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 730.000000 2781.000000
+The location is at 3570.000000 2876.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+722 4 572685
+1 5 0
+1083 3 1.28775e+06
+1 4 0
+5776 2 1.87657e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 730.000000 2775.000000
+The location is at 3570.000000 2880.000000
+The min slew is 8.33225e+07. The max slew is 8.50497e+08. The slew spec is 4.6691e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+722 3 572685
+1 4 0
+1083 2 1.28775e+06
+1 3 0
+19996 1 2.75369e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1093.000000 2950.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+722 3 572685
+1 4 0
+1083 2 1.28775e+06
+1 3 0
+19993 1 2.75347e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1090.000000 2950.000000
+The min slew is 8.33225e+07. The max slew is 8.50497e+08. The slew spec is 6.97062e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+722 3 572685
+1 4 0
+1083 2 1.28775e+06
+1 3 0
+3738 1 1.27652e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 680.000000 1071.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+722 3 572685
+1 4 0
+1083 2 1.28775e+06
+1 3 0
+3737 1 1.27623e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 680.000000 1071.000000
+RC4
+The min slew is 2.20392e+07. The max slew is 1.66979e+09. The slew spec is 3.5159e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+132 4 19137.8
+1 5 0
+5518 3 3.24806e+07
+1 4 0
+11419 2 3.50355e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 342.000000 940.000000
+The location is at 3363.000000 5660.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+132 4 19137.8
+1 5 0
+5516 3 3.24601e+07
+1 4 0
+11417 2 3.5035e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 340.000000 940.000000
+The location is at 3360.000000 5660.000000
+The min slew is 2.20392e+07. The max slew is 1.66979e+09. The slew spec is 8.45915e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+132 3 19137.8
+1 4 0
+6033 2 3.34971e+07
+1 3 0
+15359 1 9.07216e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 840.000000 4040.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+132 3 19137.8
+1 4 0
+6033 2 3.34971e+07
+1 3 0
+15354 1 9.06299e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 840.000000 4035.000000
+The min slew is 2.20392e+07. The max slew is 1.66979e+09. The slew spec is 1.34024e+09
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+132 3 19137.8
+1 4 0
+3117 2 1.06672e+07
+1 3 0
+9018 1 3.43497e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1525.000000 640.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+132 3 19137.8
+1 4 0
+3112 2 1.0633e+07
+1 3 0
+9013 1 3.43483e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1530.000000 640.000000
+RC5
+The min slew is 2.83544e+08. The max slew is 1.61301e+09. The slew spec is 5.49437e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+431 2 204078
+1 3 0
+39343 1 5.01326e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4894.000000 5510.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+435 2 207884
+1 3 0
+39784 1 5.11124e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 5008.000000 5510.000000
+The min slew is 2.83544e+08. The max slew is 1.61301e+09. The slew spec is 9.48277e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+431 2 204078
+1 3 0
+28715 1 4.31036e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3940.000000 3676.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+435 2 207884
+1 3 0
+29110 1 4.39709e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3940.000000 3820.000000
+The min slew is 2.83544e+08. The max slew is 1.61301e+09. The slew spec is 1.34712e+09
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+431 2 204078
+1 3 0
+1681 1 3.10441e+06
+1 2 0
+1671 1 3.06759e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4210.000000 1310.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+435 2 207884
+1 3 0
+2257 1 5.57477e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4110.000000 1340.000000
+RC6
+The min slew is 3.66604e+08. The max slew is 3.14471e+09. The slew spec is 9.22225e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+1119 2 1.37564e+06
+1 3 0
+28197 1 5.19345e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1423.000000 4198.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+1121 2 1.38056e+06
+1 3 0
+28523 1 5.29565e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1322.000000 4198.000000
+The min slew is 3.66604e+08. The max slew is 3.14471e+09. The slew spec is 1.75566e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+1119 2 1.37564e+06
+1 3 0
+16263 1 1.96698e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4119.000000 1888.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+1121 2 1.38056e+06
+1 3 0
+16616 1 2.03666e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3970.000000 1888.000000
+The min slew is 3.66604e+08. The max slew is 3.14471e+09. The slew spec is 2.58909e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+1119 2 1.37564e+06
+1 3 0
+5124 1 2.53143e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7811.000000 1403.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+1121 2 1.38056e+06
+1 3 0
+5355 1 2.69918e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7623.000000 1403.000000
+RC7
+The min slew is 1.87799e+08. The max slew is 1.45169e+09. The slew spec is 4.40577e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+403 4 178423
+1 5 0
+7882 3 4.20112e+07
+1 4 0
+Best solution uses 3 buffers
+The buffer number is 3
+The location is at 4066.000000 3015.000000
+The location is at 4898.000000 2496.000000
+The location is at 1675.000000 1763.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+411 4 185578
+1 5 0
+8358 3 4.59613e+07
+1 4 0
+Best solution uses 3 buffers
+The buffer number is 3
+The location is at 4257.000000 3015.000000
+The location is at 4898.000000 2310.000000
+The location is at 1517.000000 1763.000000
+The min slew is 1.87799e+08. The max slew is 1.45169e+09. The slew spec is 8.19744e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+403 2 178423
+1 3 0
+38903 1 7.24948e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3270.000000 2115.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+411 2 185578
+1 3 0
+39765 1 7.47321e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3423.000000 2139.000000
+The min slew is 1.87799e+08. The max slew is 1.45169e+09. The slew spec is 1.19891e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+403 2 178423
+1 3 0
+1661 1 2.61826e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 2828.000000 679.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+411 2 185578
+1 3 0
+1845 1 3.00646e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 2828.000000 836.000000
+RC8
+The min slew is 8.62888e+06. The max slew is 1.60811e+09. The slew spec is 3.28524e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+38 5 1582
+1 6 0
+199 4 43144.7
+1 5 0
+21401 3 2.69657e+08
+1 4 0
+Best solution uses 3 buffers
+The buffer number is 3
+The location is at 5964.000000 3078.000000
+The location is at 3988.000000 4997.000000
+The location is at 6894.000000 4602.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+42 5 1933.56
+1 6 0
+203 4 44911.3
+1 5 0
+22424 3 2.82334e+08
+1 4 0
+Best solution uses 3 buffers
+The buffer number is 3
+The location is at 5964.000000 3260.000000
+The location is at 3916.000000 5113.000000
+The location is at 6894.000000 4700.000000
+The min slew is 8.62888e+06. The max slew is 1.60811e+09. The slew spec is 8.08367e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+38 4 1582
+1 5 0
+199 3 43144.7
+1 4 0
+1684 2 2.23557e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 6450.000000 702.000000
+The location is at 6386.000000 2582.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+42 4 1933.56
+1 5 0
+203 3 44911.3
+1 4 0
+1905 2 2.90992e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 6450.000000 901.000000
+The location is at 6156.000000 2582.000000
+The min slew is 8.62888e+06. The max slew is 1.60811e+09. The slew spec is 1.28821e+09
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+38 3 1582
+1 4 0
+199 2 43144.7
+1 3 0
+1737 1 2.38993e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 6450.000000 755.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+42 3 1933.56
+1 4 0
+203 2 44911.3
+1 3 0
+1935 1 3.01051e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 6450.000000 931.000000
+RC9
+The min slew is 1.03212e+08. The max slew is 2.29305e+09. The slew spec is 5.41179e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+398 3 174023
+1 4 0
+3865 2 1.14312e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 3102.000000 844.000000
+The location is at 6742.000000 3110.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+401 3 176657
+1 4 0
+4097 2 1.21515e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 3040.000000 956.000000
+The location is at 6742.000000 2973.000000
+The min slew is 1.03212e+08. The max slew is 2.29305e+09. The slew spec is 1.19813e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+398 2 174023
+1 3 0
+40754 1 6.67638e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3395.000000 3205.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+401 2 176657
+1 3 0
+41809 1 6.94402e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3395.000000 3450.000000
+The min slew is 1.03212e+08. The max slew is 2.29305e+09. The slew spec is 1.85508e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+398 2 174023
+1 3 0
+3752 1 1.11436e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3215.000000 844.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+401 2 176657
+1 3 0
+4087 1 1.21258e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3040.000000 945.000000
+RC10
+The min slew is 4.62629e+08. The max slew is 5.83933e+09. The slew spec is 1.53797e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+271 3 80682.1
+1 4 0
+19707 2 1.77082e+08
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 3874.000000 840.000000
+The location is at 5950.000000 5800.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+273 3 81877.4
+1 4 0
+21649 2 1.9337e+08
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 4662.000000 1040.000000
+The location is at 6320.000000 6062.000000
+The min slew is 4.62629e+08. The max slew is 5.83933e+09. The slew spec is 3.15098e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+271 2 80682.1
+1 3 0
+31517 1 2.09259e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 2022.000000 3740.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+273 2 81877.4
+1 3 0
+35257 1 2.63185e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 1510.000000 4041.000000
+The min slew is 4.62629e+08. The max slew is 5.83933e+09. The slew spec is 4.76399e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+271 2 80682.1
+1 3 0
+20984 1 1.80561e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4710.000000 1199.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+273 2 81877.4
+1 3 0
+24023 1 1.99964e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4670.000000 2284.000000
+RC11
+The min slew is 3.79354e+08. The max slew is 8.52702e+09. The slew spec is 2.00889e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+88 3 8506.55
+1 4 0
+4753 2 1.26599e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 8847.000000 1631.000000
+The location is at 640.000000 5341.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+93 3 9500.8
+1 4 0
+74309 2 1.73924e+09
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 7762.000000 959.000000
+The location is at 1775.000000 5720.000000
+The min slew is 3.79354e+08. The max slew is 8.52702e+09. The slew spec is 4.45319e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+88 2 8506.55
+1 3 0
+82747 1 1.56004e+09
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 5231.000000 1913.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+93 2 9500.8
+1 3 0
+118301 1 2.0616e+09
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3312.000000 1622.000000
+The min slew is 3.79354e+08. The max slew is 8.52702e+09. The slew spec is 6.89749e+09
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+88 2 8506.55
+1 3 0
+63068 1 1.4282e+09
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 8639.000000 1899.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+93 2 9500.8
+1 3 0
+77823 1 1.76499e+09
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 7274.000000 178.000000
+RT1
+The min slew is 1.0078e+06. The max slew is 2.42751e+06. The slew spec is 1.29175e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+12 2 157.102
+1 3 0
+578 1 326787
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 639.000000 208.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+12 2 157.102
+1 3 0
+577 1 326215
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 639.000000 207.000000
+The min slew is 1.0078e+06. The max slew is 2.42751e+06. The slew spec is 1.71766e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+12 2 157.102
+1 3 0
+187 1 38416.3
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 713.000000 150.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+12 2 157.102
+1 3 0
+186 1 38006.5
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 714.000000 150.000000
+The min slew is 1.0078e+06. The max slew is 2.42751e+06. The slew spec is 2.14357e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+12 2 157.102
+1 3 0
+73 1 5853.41
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 827.000000 150.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+12 2 157.102
+1 3 0
+72 1 5694.11
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 828.000000 150.000000
+RT2
+The min slew is 1.03941e+08. The max slew is 9.41063e+08. The slew spec is 2.71365e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+1066 3 1.24841e+06
+1 4 0
+1784 2 3.49492e+06
+1 3 0
+14588 1 1.79954e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 6017.000000 3600.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+1066 3 1.24841e+06
+1 4 0
+1787 2 3.50668e+06
+1 3 0
+14661 1 1.81348e+08
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 6017.000000 3626.000000
+The min slew is 1.03941e+08. The max slew is 9.41063e+08. The slew spec is 5.22502e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+1066 3 1.24841e+06
+1 4 0
+1784 2 3.49492e+06
+1 3 0
+5614 1 2.71747e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4552.000000 2106.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+1066 3 1.24841e+06
+1 4 0
+1787 2 3.50668e+06
+1 3 0
+5671 1 2.77084e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 4589.000000 2106.000000
+The min slew is 1.03941e+08. The max slew is 9.41063e+08. The slew spec is 7.73638e+08
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+1750 2 3.36299e+06
+1 3 0
+2468 1 5.09401e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3140.000000 1750.000000
+
+Under 1 mode, Root has 2 solutions
+They have c, w, s as:
+2527 1 5.26723e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3140.000000 1805.000000
+RT3
+The min slew is 1.2921e+06. The max slew is 1.09189e+07. The slew spec is 3.21746e+06
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+78 4 6679.56
+1 5 0
+115 3 14440.2
+1 4 0
+2198 2 1.92176e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 704.000000 334.000000
+The location is at 194.000000 146.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+78 4 6679.56
+1 5 0
+115 3 14440.2
+1 4 0
+2196 2 1.92038e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 704.000000 333.000000
+The location is at 195.000000 146.000000
+The min slew is 1.2921e+06. The max slew is 1.09189e+07. The slew spec is 6.10551e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+88 3 8481.29
+1 4 0
+125 2 16110.1
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 572.000000 102.000000
+The location is at 466.000000 275.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+87 3 8291.23
+1 4 0
+124 2 15943.1
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 572.000000 101.000000
+The location is at 467.000000 275.000000
+The min slew is 1.2921e+06. The max slew is 1.09189e+07. The slew spec is 8.99356e+06
+
+Under 0 mode, Root has 2 solutions
+They have c, w, s as:
+153 1 20873.6
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 572.000000 130.000000
+
+Under 1 mode, Root has 2 solutions
+They have c, w, s as:
+152 1 20622.1
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 572.000000 129.000000
+RT4
+The min slew is 558412. The max slew is 1.01553e+07. The slew spec is 2.47778e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+3 3 8.7889
+1 4 0
+3130 2 2.19132e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 262.000000 184.000000
+The location is at 962.000000 495.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+3 3 8.7889
+1 4 0
+3128 2 2.18983e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 262.000000 183.000000
+The location is at 963.000000 495.000000
+The min slew is 558412. The max slew is 1.01553e+07. The slew spec is 5.35684e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+3 3 8.7889
+1 4 0
+1158 2 593168
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 634.000000 104.000000
+The location is at 968.000000 173.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+3 3 8.7889
+1 4 0
+1156 2 592448
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 635.000000 104.000000
+The location is at 968.000000 172.000000
+The min slew is 558412. The max slew is 1.01553e+07. The slew spec is 8.2359e+06
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+3 2 8.7889
+1 3 0
+3684 1 6.72677e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 723.000000 104.000000
+
+Under 1 mode, Root has 4 solutions
+They have c, w, s as:
+3 2 8.7889
+1 3 0
+3683 1 6.72654e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 722.000000 104.000000
+RT5
+The min slew is 2.18864e+07. The max slew is 4.62751e+08. The slew spec is 1.10059e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+232 4 59127.3
+1 5 0
+663 3 411769
+1 4 0
+3502 2 7.11647e+06
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 3281.000000 1002.000000
+The location is at 1915.000000 2402.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+234 4 60151.2
+1 5 0
+675 3 425242
+1 4 0
+6259 2 2.18229e+07
+1 3 0
+Best solution uses 2 buffers
+The buffer number is 2
+The location is at 3286.000000 1065.000000
+The location is at 1867.000000 2387.000000
+The min slew is 2.18864e+07. The max slew is 4.62751e+08. The slew spec is 2.42319e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+232 3 59127.3
+1 4 0
+663 2 411769
+1 3 0
+12213 1 6.01513e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3263.000000 1651.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+234 3 60151.2
+1 4 0
+675 2 425242
+1 3 0
+12493 1 6.2617e+07
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 3184.000000 1651.000000
+The min slew is 2.18864e+07. The max slew is 4.62751e+08. The slew spec is 3.74578e+08
+
+Under 0 mode, Root has 6 solutions
+They have c, w, s as:
+232 3 59127.3
+1 4 0
+663 2 411769
+1 3 0
+1853 1 2.19214e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 2988.000000 451.000000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+234 3 60151.2
+1 4 0
+675 2 425242
+1 3 0
+2161 1 2.74083e+06
+1 2 0
+Best solution uses 1 buffers
+The buffer number is 1
+The location is at 2986.000000 559.000000

@@ -1,0 +1,9 @@
+from gurobipy import *
+
+m = read("/home/polaris/yzhang1/Implementation/flute-3.1/flute-3.1/tmp/problem.lp");
+m.printStats()
+m.Params.TimeLimit=200
+m.Params.MIPGap=0.0001
+m.optimize();
+m.write("/home/polaris/yzhang1/Implementation/flute-3.1/flute-3.1/tmp/problem.sol");
+quit

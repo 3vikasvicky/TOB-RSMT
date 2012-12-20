@@ -1,0 +1,1876 @@
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+argv[1] = RC1_T_NoObstacle
+argv[2] = Table/table.log
+argv[3] = CapUpperBound.cap
+
+-------------Read file-----------
+Open file = benchOARST_Timing/RC1_T_NoObstacle.net
+# of Sink = 9 (not include driver)
+Driver 80 8160 3 0.000000
+0
+
+--[Read Input File]
+# of Obstacles   = 0
+# of Pins        = 10
+(MinX,MinY) = (0,0)
+(MaxX,MaxY) = (9170,9000)
+Buttom Layer Num = 3
+Top    Layer Num = 3
+W of Grid = 100 (just for displaying usage)
+L of Grid = 100 (just for displaying usage)
+
+--[Display Parameters of Elmore Delay Model]
+unit_r   = 0.076 (ohms/um)
+unit_c   = 0.118 (Ff/um)
+Rd       = 440  (ohms)
+Driver's arrival time = 0  (ps)
+Capacitance Upper Bound is 410.000000
+
+-------------init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Start OASG Construction]
+# of Sweep Entry = 10
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 40
+# of SGEdge = 20 (no dual edges)
+# of SGNode = 10
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 5304.132046)
+N(1489.462990; 1489.462990)
+BUFFERED!!!!!!!!!(1489.462990; 5304.132046)
+NN:(5304.132046; 7889.339968)
+N(5304.132046; 5304.132046)
+NN:(5304.132046; 12100.631144)
+N(5304.132046; 5304.132046)
+BUFFERED!!!!!!!!!(5304.132046; 12100.631144)
+NN:(12100.631144; 17490.965086)
+N(12100.631144; 12100.631144)
+BUFFERED!!!!!!!!!(5304.132046; 7889.339968)
+NN:(7889.339968; 10031.231655)
+N(7889.339968; 7889.339968)
+NN:(7889.339968; 9762.572468)
+N(7889.339968; 7889.339968)
+BUFFERED!!!!!!!!!(7889.339968; 9762.572468)
+NN:(9762.572468; 12117.864382)
+N(9762.572468; 9762.572468)
+NN:(9762.572468; 14033.146200)
+N(9762.572468; 9762.572468)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 10
+* of SGEdges 40
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+==> now Priority_CTF (Criticality Threshold Factor) = -21.0503
+max radius in spanning graph = 13500.6 (um)
+add # 4 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #2 U shape
+FLIP EDGE: remove #2 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2714.57
+Worst sink delay = 3119.94 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -270.195, New WNS¡@= -185.941
+WNS become 68.8174%
+
+--[Part-2 end]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 1
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -185.941, New WNS¡@= -185.941
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 1 round
+WL when Min WNS = 28220
+Min WNS = -185.941
+
+-------------init data-----------
+
+-------------omit block least candidates mode buffering-----------
+At OMIT mode, node is at 9140.000000, 6340.000000, distance to from child to the node is 740.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7310.000000, 1200.000000, distance to from child to the node is 1000.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 1650.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 1277.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 643.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1480.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 2007.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 937.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 487.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 863.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 1909.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1794.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 76.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1307.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 563.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 2572.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 16.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 94.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2553.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2453.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1337.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 993.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1443.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 887.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1763.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 737.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 843.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 327.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2173.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 1140.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 480.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 510.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1806.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1912.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 3663.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1006.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 1667.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 4653.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1996.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 840.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 927.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 389.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 311.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 1230.000000, length_limit is 2657.000000
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+283.958 9 15111
+3 12 0
+138.818 10 7092.09
+39.698 11 1004.86
+Best solution uses 9 buffers
+
+-------------Plot the current tree-----------
+The buffer number is 9
+The location is at 1310.000000 7849.000000
+The location is at 3037.000000 7460.000000
+The location is at 5687.000000 7460.000000
+The location is at 7224.000000 6340.000000
+The location is at 7240.000000 6264.000000
+The location is at 7240.000000 3607.000000
+The location is at 7690.000000 2477.000000
+The location is at 1310.000000 5464.000000
+The location is at 1310.000000 2807.000000
+
+-------------Before improving the timing-----------
+Delay at Node2(7130, 6340) is 1.258e+06
+Delay at Node5(7240, 4470) is 1.396e+06
+Delay at Node6(9140, 7080) is 1.301e+06
+Delay at Node7(7690, 1200) is 1.528e+06
+Delay at Node9(7310, 200) is 1.537e+06
+Delay at Node11(9170, 3120) is 1.498e+06
+Delay at Node14(4800, 7460) is 8.567e+05
+Delay at Node15(1310, 9000) is 1.999e+05
+Delay at Node18(2300, 1140) is 4.018e+05
+Delay at Node19(80, 8160) is 2.036e+05
+The total negative slack is -1.480e+07 ps
+The worst negative slack is at node 9 with -1.537e+06 ps
+WD When Min WNS= 3132.291448 (ps)
+TD When Min WNS= 2721.740803 (ps)
+
+-------------Write input file for bobrsmt-----------
+
+-------------Run Buffering-----------
+
+-------------Save Slack Information-----------
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+-------------Second init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Start OASG Construction]
+# of Sweep Entry = 10
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 40
+# of SGEdge = 20 (no dual edges)
+# of SGNode = 10
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 5304.132046)
+N(1489.462990; 1489.462990)
+BUFFERED!!!!!!!!!(1489.462990; 5304.132046)
+NN:(5304.132046; 7889.339968)
+N(5304.132046; 5304.132046)
+NN:(5304.132046; 12100.631144)
+N(5304.132046; 5304.132046)
+BUFFERED!!!!!!!!!(5304.132046; 12100.631144)
+NN:(12100.631144; 17490.965086)
+N(12100.631144; 12100.631144)
+BUFFERED!!!!!!!!!(5304.132046; 7889.339968)
+NN:(7889.339968; 10031.231655)
+N(7889.339968; 7889.339968)
+NN:(7889.339968; 9762.572468)
+N(7889.339968; 7889.339968)
+BUFFERED!!!!!!!!!(7889.339968; 9762.572468)
+NN:(9762.572468; 12117.864382)
+N(9762.572468; 9762.572468)
+NN:(9762.572468; 14033.146200)
+N(9762.572468; 9762.572468)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 10
+* of SGEdges 40
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+../benchmarks/RC1_T_NoObstacle/timing.txt
+==> now Priority_CTF (Criticality Threshold Factor) = -159328
+max radius in spanning graph = 13500.6 (um)
+add # 3 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #2 U shape
+FLIP EDGE: remove #2 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2714.57
+Worst sink delay = 3119.94 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -270.195, New WNS¡@= -185.941
+WNS become 68.8174%
+
+--[Part-2 end]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 1
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -185.941, New WNS¡@= -185.941
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 1 round
+WL when Min WNS = 28220
+Min WNS = -185.941
+
+-------------init data-----------
+
+-------------omit block least candidates mode buffering-----------
+At OMIT mode, node is at 9140.000000, 6340.000000, distance to from child to the node is 740.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7310.000000, 1200.000000, distance to from child to the node is 1000.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 1650.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 1277.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 643.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1480.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 2007.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 937.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 487.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 863.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 1909.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1794.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 76.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1307.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 563.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 2572.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 16.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 94.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2553.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2453.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1337.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 993.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1443.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 887.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1763.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 737.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 843.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 327.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2173.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 1140.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 480.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 510.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1806.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1912.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 3663.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1006.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 1667.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 4653.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1996.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 840.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 927.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 389.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 311.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 1230.000000, length_limit is 2657.000000
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+283.958 9 15111
+3 12 0
+138.818 10 7092.09
+39.698 11 1004.86
+Best solution uses 9 buffers
+
+-------------Plot the current tree-----------
+The buffer number is 9
+The location is at 1310.000000 7849.000000
+The location is at 3037.000000 7460.000000
+The location is at 5687.000000 7460.000000
+The location is at 7224.000000 6340.000000
+The location is at 7240.000000 6264.000000
+The location is at 7240.000000 3607.000000
+The location is at 7690.000000 2477.000000
+The location is at 1310.000000 5464.000000
+The location is at 1310.000000 2807.000000
+
+-------------Before improving the timing-----------
+Delay at Node2(7130, 6340) is 1.258e+06
+Delay at Node5(7240, 4470) is 1.396e+06
+Delay at Node6(9140, 7080) is 1.301e+06
+Delay at Node7(7690, 1200) is 1.528e+06
+Delay at Node9(7310, 200) is 1.537e+06
+Delay at Node11(9170, 3120) is 1.498e+06
+Delay at Node14(4800, 7460) is 8.567e+05
+Delay at Node15(1310, 9000) is 1.999e+05
+Delay at Node18(2300, 1140) is 4.018e+05
+Delay at Node19(80, 8160) is 2.036e+05
+The total negative slack is -1.480e+07 ps
+The worst negative slack is at node 9 with -1.537e+06 ps
+WD When Min WNS= 3132.291448 (ps)
+TD When Min WNS= 2721.740803 (ps)
+
+-------------Write input file for bobrsmt-----------
+
+-------------Run Buffering-----------
+
+-------------Save Slack Information-----------
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+-------------Second init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Start OASG Construction]
+# of Sweep Entry = 10
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 40
+# of SGEdge = 20 (no dual edges)
+# of SGNode = 10
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 5304.132046)
+N(1489.462990; 1489.462990)
+BUFFERED!!!!!!!!!(1489.462990; 5304.132046)
+NN:(5304.132046; 7889.339968)
+N(5304.132046; 5304.132046)
+NN:(5304.132046; 12100.631144)
+N(5304.132046; 5304.132046)
+BUFFERED!!!!!!!!!(5304.132046; 12100.631144)
+NN:(12100.631144; 17490.965086)
+N(12100.631144; 12100.631144)
+BUFFERED!!!!!!!!!(5304.132046; 7889.339968)
+NN:(7889.339968; 10031.231655)
+N(7889.339968; 7889.339968)
+NN:(7889.339968; 9762.572468)
+N(7889.339968; 7889.339968)
+BUFFERED!!!!!!!!!(7889.339968; 9762.572468)
+NN:(9762.572468; 12117.864382)
+N(9762.572468; 9762.572468)
+NN:(9762.572468; 14033.146200)
+N(9762.572468; 9762.572468)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 10
+* of SGEdges 40
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+../benchmarks/RC1_T_NoObstacle/timing.txt
+==> now Priority_CTF (Criticality Threshold Factor) = -159328
+max radius in spanning graph = 13500.6 (um)
+add # 3 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #2 U shape
+FLIP EDGE: remove #2 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2714.57
+Worst sink delay = 3119.94 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -270.195, New WNS¡@= -185.941
+WNS become 68.8174%
+
+--[Part-2 end]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 1
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -185.941, New WNS¡@= -185.941
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 1 round
+WL when Min WNS = 28220
+Min WNS = -185.941
+
+-------------init data-----------
+
+-------------omit block least candidates mode buffering-----------
+At OMIT mode, node is at 9140.000000, 6340.000000, distance to from child to the node is 740.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7310.000000, 1200.000000, distance to from child to the node is 1000.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 1650.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 1277.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 643.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1480.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 2007.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 937.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 487.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 863.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 1909.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1794.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 76.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1307.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 563.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 2572.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 16.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 94.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2553.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2453.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1337.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 993.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1443.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 887.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1763.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 737.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 843.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 327.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2173.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 1140.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 480.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 510.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1806.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1912.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 3663.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1006.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 1667.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 4653.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1996.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 840.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 927.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 389.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 311.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 1230.000000, length_limit is 2657.000000
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+283.958 9 15111
+3 12 0
+138.818 10 7092.09
+39.698 11 1004.86
+Best solution uses 9 buffers
+
+-------------Plot the current tree-----------
+The buffer number is 9
+The location is at 1310.000000 7849.000000
+The location is at 3037.000000 7460.000000
+The location is at 5687.000000 7460.000000
+The location is at 7224.000000 6340.000000
+The location is at 7240.000000 6264.000000
+The location is at 7240.000000 3607.000000
+The location is at 7690.000000 2477.000000
+The location is at 1310.000000 5464.000000
+The location is at 1310.000000 2807.000000
+
+-------------Before improving the timing-----------
+Delay at Node2(7130, 6340) is 1.258e+06
+Delay at Node5(7240, 4470) is 1.396e+06
+Delay at Node6(9140, 7080) is 1.301e+06
+Delay at Node7(7690, 1200) is 1.528e+06
+Delay at Node9(7310, 200) is 1.537e+06
+Delay at Node11(9170, 3120) is 1.498e+06
+Delay at Node14(4800, 7460) is 8.567e+05
+Delay at Node15(1310, 9000) is 1.999e+05
+Delay at Node18(2300, 1140) is 4.018e+05
+Delay at Node19(80, 8160) is 2.036e+05
+The total negative slack is -1.480e+07 ps
+The worst negative slack is at node 9 with -1.537e+06 ps
+WD When Min WNS= 3132.291448 (ps)
+TD When Min WNS= 2721.740803 (ps)
+
+-------------Write input file for bobrsmt-----------
+
+-------------Run Buffering-----------
+
+-------------Save Slack Information-----------
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+-------------Second init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Start OASG Construction]
+# of Sweep Entry = 10
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 40
+# of SGEdge = 20 (no dual edges)
+# of SGNode = 10
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 5304.132046)
+N(1489.462990; 1489.462990)
+BUFFERED!!!!!!!!!(1489.462990; 5304.132046)
+NN:(5304.132046; 7889.339968)
+N(5304.132046; 5304.132046)
+NN:(5304.132046; 12100.631144)
+N(5304.132046; 5304.132046)
+BUFFERED!!!!!!!!!(5304.132046; 12100.631144)
+NN:(12100.631144; 17490.965086)
+N(12100.631144; 12100.631144)
+BUFFERED!!!!!!!!!(5304.132046; 7889.339968)
+NN:(7889.339968; 10031.231655)
+N(7889.339968; 7889.339968)
+NN:(7889.339968; 9762.572468)
+N(7889.339968; 7889.339968)
+BUFFERED!!!!!!!!!(7889.339968; 9762.572468)
+NN:(9762.572468; 12117.864382)
+N(9762.572468; 9762.572468)
+NN:(9762.572468; 14033.146200)
+N(9762.572468; 9762.572468)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 10
+* of SGEdges 40
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+../benchmarks/RC1_T_NoObstacle/timing.txt
+==> now Priority_CTF (Criticality Threshold Factor) = -159328
+max radius in spanning graph = 13500.6 (um)
+add # 3 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #2 U shape
+FLIP EDGE: remove #2 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2714.57
+Worst sink delay = 3119.94 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -270.195, New WNS¡@= -185.941
+WNS become 68.8174%
+
+--[Part-2 end]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 1
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -185.941, New WNS¡@= -185.941
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 1 round
+WL when Min WNS = 28220
+Min WNS = -185.941
+
+-------------init data-----------
+
+-------------omit block least candidates mode buffering-----------
+At OMIT mode, node is at 9140.000000, 6340.000000, distance to from child to the node is 740.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7310.000000, 1200.000000, distance to from child to the node is 1000.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 1650.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 1277.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 643.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1480.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 2007.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 937.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 487.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 863.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 1909.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1794.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 76.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1307.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 563.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 2572.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 16.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 94.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2553.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2453.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1337.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 993.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1443.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 887.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1763.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 737.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 843.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 327.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2173.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 1140.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 480.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 510.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1806.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1912.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 3663.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1006.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 1667.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 4653.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1996.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 840.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 927.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 389.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 311.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 1230.000000, length_limit is 2657.000000
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+283.958 9 15111
+3 12 0
+138.818 10 7092.09
+39.698 11 1004.86
+Best solution uses 9 buffers
+
+-------------Plot the current tree-----------
+The buffer number is 9
+The location is at 1310.000000 7849.000000
+The location is at 3037.000000 7460.000000
+The location is at 5687.000000 7460.000000
+The location is at 7224.000000 6340.000000
+The location is at 7240.000000 6264.000000
+The location is at 7240.000000 3607.000000
+The location is at 7690.000000 2477.000000
+The location is at 1310.000000 5464.000000
+The location is at 1310.000000 2807.000000
+
+-------------Before improving the timing-----------
+Delay at Node2(7130, 6340) is 1.258e+06
+Delay at Node5(7240, 4470) is 1.396e+06
+Delay at Node6(9140, 7080) is 1.301e+06
+Delay at Node7(7690, 1200) is 1.528e+06
+Delay at Node9(7310, 200) is 1.537e+06
+Delay at Node11(9170, 3120) is 1.498e+06
+Delay at Node14(4800, 7460) is 8.567e+05
+Delay at Node15(1310, 9000) is 1.999e+05
+Delay at Node18(2300, 1140) is 4.018e+05
+Delay at Node19(80, 8160) is 2.036e+05
+The total negative slack is -1.480e+07 ps
+The worst negative slack is at node 9 with -1.537e+06 ps
+WD When Min WNS= 3132.291448 (ps)
+TD When Min WNS= 2721.740803 (ps)
+
+-------------Write input file for bobrsmt-----------
+
+-------------Run Buffering-----------
+
+-------------Save Slack Information-----------
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+-------------Second init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Start OASG Construction]
+# of Sweep Entry = 10
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 40
+# of SGEdge = 20 (no dual edges)
+# of SGNode = 10
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 5304.132046)
+N(1489.462990; 1489.462990)
+BUFFERED!!!!!!!!!(1489.462990; 5304.132046)
+NN:(5304.132046; 7889.339968)
+N(5304.132046; 5304.132046)
+NN:(5304.132046; 12100.631144)
+N(5304.132046; 5304.132046)
+BUFFERED!!!!!!!!!(5304.132046; 12100.631144)
+NN:(12100.631144; 17490.965086)
+N(12100.631144; 12100.631144)
+BUFFERED!!!!!!!!!(5304.132046; 7889.339968)
+NN:(7889.339968; 10031.231655)
+N(7889.339968; 7889.339968)
+NN:(7889.339968; 9762.572468)
+N(7889.339968; 7889.339968)
+BUFFERED!!!!!!!!!(7889.339968; 9762.572468)
+NN:(9762.572468; 12117.864382)
+N(9762.572468; 9762.572468)
+NN:(9762.572468; 14033.146200)
+N(9762.572468; 9762.572468)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 10
+* of SGEdges 40
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+../benchmarks/RC1_T_NoObstacle/timing.txt
+==> now Priority_CTF (Criticality Threshold Factor) = -159328
+max radius in spanning graph = 13500.6 (um)
+add # 3 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #2 U shape
+FLIP EDGE: remove #2 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2714.57
+Worst sink delay = 3119.94 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -270.195, New WNS¡@= -185.941
+WNS become 68.8174%
+
+--[Part-2 end]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 1
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -185.941, New WNS¡@= -185.941
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 1 round
+WL when Min WNS = 28220
+Min WNS = -185.941
+
+-------------init data-----------
+
+-------------omit block least candidates mode buffering-----------
+At OMIT mode, node is at 9140.000000, 6340.000000, distance to from child to the node is 740.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7310.000000, 1200.000000, distance to from child to the node is 1000.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 1650.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 1277.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 643.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1480.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 2007.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 937.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 487.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 863.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 1909.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1794.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 76.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1307.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 563.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 2572.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 16.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 94.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2553.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2453.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1337.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 993.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1443.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 887.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1763.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 737.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 843.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 327.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2173.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 1140.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 480.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 510.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1806.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1912.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 3663.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1006.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 1667.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 4653.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1996.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 840.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 927.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 389.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 311.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 1230.000000, length_limit is 2657.000000
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+283.958 9 15111
+3 12 0
+138.818 10 7092.09
+39.698 11 1004.86
+Best solution uses 9 buffers
+
+-------------Plot the current tree-----------
+The buffer number is 9
+The location is at 1310.000000 7849.000000
+The location is at 3037.000000 7460.000000
+The location is at 5687.000000 7460.000000
+The location is at 7224.000000 6340.000000
+The location is at 7240.000000 6264.000000
+The location is at 7240.000000 3607.000000
+The location is at 7690.000000 2477.000000
+The location is at 1310.000000 5464.000000
+The location is at 1310.000000 2807.000000
+
+-------------Before improving the timing-----------
+Delay at Node2(7130, 6340) is 1.258e+06
+Delay at Node5(7240, 4470) is 1.396e+06
+Delay at Node6(9140, 7080) is 1.301e+06
+Delay at Node7(7690, 1200) is 1.528e+06
+Delay at Node9(7310, 200) is 1.537e+06
+Delay at Node11(9170, 3120) is 1.498e+06
+Delay at Node14(4800, 7460) is 8.567e+05
+Delay at Node15(1310, 9000) is 1.999e+05
+Delay at Node18(2300, 1140) is 4.018e+05
+Delay at Node19(80, 8160) is 2.036e+05
+The total negative slack is -1.480e+07 ps
+The worst negative slack is at node 9 with -1.537e+06 ps
+WD When Min WNS= 3132.291448 (ps)
+TD When Min WNS= 2721.740803 (ps)
+
+-------------Write input file for bobrsmt-----------
+
+-------------Run Buffering-----------
+
+-------------Save Slack Information-----------
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+-------------Second init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Start OASG Construction]
+# of Sweep Entry = 10
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 40
+# of SGEdge = 20 (no dual edges)
+# of SGNode = 10
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 5304.132046)
+N(1489.462990; 1489.462990)
+BUFFERED!!!!!!!!!(1489.462990; 5304.132046)
+NN:(5304.132046; 7889.339968)
+N(5304.132046; 5304.132046)
+NN:(5304.132046; 12100.631144)
+N(5304.132046; 5304.132046)
+BUFFERED!!!!!!!!!(5304.132046; 12100.631144)
+NN:(12100.631144; 17490.965086)
+N(12100.631144; 12100.631144)
+BUFFERED!!!!!!!!!(5304.132046; 7889.339968)
+NN:(7889.339968; 10031.231655)
+N(7889.339968; 7889.339968)
+NN:(7889.339968; 9762.572468)
+N(7889.339968; 7889.339968)
+BUFFERED!!!!!!!!!(7889.339968; 9762.572468)
+NN:(9762.572468; 12117.864382)
+N(9762.572468; 9762.572468)
+NN:(9762.572468; 14033.146200)
+N(9762.572468; 9762.572468)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 10
+* of SGEdges 40
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+../benchmarks/RC1_T_NoObstacle/timing.txt
+==> now Priority_CTF (Criticality Threshold Factor) = -159328
+max radius in spanning graph = 13500.6 (um)
+add # 3 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #2 U shape
+FLIP EDGE: remove #2 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2714.57
+Worst sink delay = 3119.94 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 3
+WNS (Worst Negative Slack) = -270.195 (ps)
+TNS (Total Negative Slack) = -311.1 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -270.195, New WNS¡@= -185.941
+WNS become 68.8174%
+
+--[Part-2 end]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2721.74
+Worst sink delay = 3132.29 (ps)
+
+# of violation sink = 3
+WNS (Worst Negative Slack) = -185.941 (ps)
+TNS (Total Negative Slack) = -251.546 (ps)
+# 1
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -185.941, New WNS¡@= -185.941
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 1 round
+WL when Min WNS = 28220
+Min WNS = -185.941
+
+-------------init data-----------
+
+-------------omit block least candidates mode buffering-----------
+At OMIT mode, node is at 9140.000000, 6340.000000, distance to from child to the node is 740.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7310.000000, 1200.000000, distance to from child to the node is 1000.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 1200.000000, distance to from child to the node is 380.000000, length_limit is 1650.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1920.000000, length_limit is 1277.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 643.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7690.000000, 3120.000000, distance to from child to the node is 1480.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 2007.000000
+At OMIT mode, node is at 7240.000000, 3120.000000, distance to from child to the node is 450.000000, length_limit is 937.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 1350.000000, length_limit is 487.000000
+At OMIT mode, node is at 7240.000000, 4470.000000, distance to from child to the node is 863.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1900.000000, length_limit is 1909.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1794.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 76.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 1870.000000, length_limit is 1307.000000
+At OMIT mode, node is at 7240.000000, 6340.000000, distance to from child to the node is 563.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 2572.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 110.000000, length_limit is 16.000000
+At OMIT mode, node is at 7130.000000, 6340.000000, distance to from child to the node is 94.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2657.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2553.000000
+At OMIT mode, node is at 7130.000000, 7460.000000, distance to from child to the node is 1120.000000, length_limit is 2453.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1337.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 993.000000, length_limit is 2657.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 2330.000000, length_limit is 1443.000000
+At OMIT mode, node is at 4800.000000, 7460.000000, distance to from child to the node is 887.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1763.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 737.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 1657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 843.000000, length_limit is 2657.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2500.000000, length_limit is 327.000000
+At OMIT mode, node is at 2300.000000, 7460.000000, distance to from child to the node is 2173.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 1140.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 480.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 510.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1806.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 990.000000, length_limit is 1912.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 3663.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1006.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 6320.000000, length_limit is 1667.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 4653.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 7460.000000, distance to from child to the node is 1996.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 840.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 927.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 700.000000, length_limit is 389.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 311.000000, length_limit is 2657.000000
+At OMIT mode, node is at 1310.000000, 8160.000000, distance to from child to the node is 1230.000000, length_limit is 2657.000000
+
+Under 0 mode, Root has 4 solutions
+They have c, w, s as:
+283.958 9 15111
+3 12 0
+138.818 10 7092.09
+39.698 11 1004.86
+Best solution uses 9 buffers
+
+-------------Plot the current tree-----------
+The buffer number is 9
+The location is at 1310.000000 7849.000000
+The location is at 3037.000000 7460.000000
+The location is at 5687.000000 7460.000000
+The location is at 7224.000000 6340.000000
+The location is at 7240.000000 6264.000000
+The location is at 7240.000000 3607.000000
+The location is at 7690.000000 2477.000000
+The location is at 1310.000000 5464.000000
+The location is at 1310.000000 2807.000000
+
+-------------Before improving the timing-----------
+Delay at Node2(7130, 6340) is 1.258e+06
+Delay at Node5(7240, 4470) is 1.396e+06
+Delay at Node6(9140, 7080) is 1.301e+06
+Delay at Node7(7690, 1200) is 1.528e+06
+Delay at Node9(7310, 200) is 1.537e+06
+Delay at Node11(9170, 3120) is 1.498e+06
+Delay at Node14(4800, 7460) is 8.567e+05
+Delay at Node15(1310, 9000) is 1.999e+05
+Delay at Node18(2300, 1140) is 4.018e+05
+Delay at Node19(80, 8160) is 2.036e+05
+The total negative slack is -1.480e+07 ps
+The worst negative slack is at node 9 with -1.537e+06 ps
+WD When Min WNS= 3132.291448 (ps)
+TD When Min WNS= 2721.740803 (ps)
+
+-------------Write input file for bobrsmt-----------
+
+-------------Run Buffering-----------
+
+-------------Save Slack Information-----------
+
+-------------Check Correction-----------
+CHECK CORRECTION is disable!
+
+
+-------------Display WL Result-----------
+
+--[Routing Result :]
+Total SGEdge Length = 26632.8
+Longest Radius = 15079.3
+
+--[Rectilinearizing Result :]
+# of RGEdge = 38
+Total RGEdge Length = 28220
+Longest Radius = 15950
+
+-------------Display Run-Time Result-----------
+Run-time of fileIO = 0
+
+Run-time of building spanning graph = 0
+
+Run-time of assigning slack for each node = 0
+
+SlackBeforePrim Max=-1e+09, Min=1e+09
+
+Run-time of doing prim's algorithm = 0
+
+Times of update in prim's algorithm = 0
+		Run-time of consider obstacle (by r-tree) = 0
+
+Run-time of routing spanning graph = 0
+		more detail 
+		Run-time of generating multi-sources (by r-tree) = 0
+		Run-time of maze routing = 0
+		Run-time of back tracing = 0
+		Run-time of restoring variable = 0
+         TimesOfMaze = 182
+
+Run-time of rectilinearizing spanning edges = 0
+
+Run-time of post processing = 0
+
+Run-time of trunk algo = 0
+
+Run-time of program = 0
+
+Others of program = 0
+
+-------------Write Result to Table-----------
+write table file = Table/table.log

@@ -1,0 +1,4 @@
+awk '{print $1," ", $2, " ", $1," ", $4," ", $3, " ", $4, " ", $3, " ", $2}' IND2.pblock > pblock
+awk '{print "a" (NR-1) "\t" $0"\t:N"} ' IND2_NOB.inp > IND2.pl
+awk '{print "a" (NR-1) " O"}'  IND2_NOB.inp > IND1.nets
+awk '{print "a" (NR-1) "    0    0"}' IND2_NOB.inp > IND2.nodes

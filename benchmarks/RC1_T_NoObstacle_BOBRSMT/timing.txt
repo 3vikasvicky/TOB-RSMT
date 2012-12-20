@@ -1,0 +1,10 @@
+Delay at Node2(7130, 6340) is 898.685
+Delay at Node5(7240, 4470) is 1099.63
+Delay at Node6(9140, 7080) is 1127.26
+Delay at Node9(9170, 3120) is 1393.11
+Delay at Node12(7310, 200) is 1477.41
+Delay at Node13(7690, 1200) is 1406.67
+Delay at Node15(4800, 7460) is 639.238
+Delay at Node16(1310, 9000) is 232.505
+Delay at Node19(2300, 1140) is 884.343
+Delay at Node20(80, 8160) is 284.929

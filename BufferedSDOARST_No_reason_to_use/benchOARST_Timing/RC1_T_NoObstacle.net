@@ -1,0 +1,53 @@
+Net Example
+UnitCap: 0.000118
+UnitRes: 0.000076
+Number Sinks 9
+Source 0
+  Location (80, 8160)
+  Resistance 0.440000
+  Arr 0.000000
+Sink 1
+  Location (1310,9000)
+  Capacitance 0.001000
+  Req 1.832349
+  Polarity 0
+Sink 2
+  Location (2300,1140)
+  Capacitance 0.001000
+  Req 1.991094
+  Polarity 0
+Sink 3
+  Location (4800,7460)
+  Capacitance 0.001000
+  Req 2.432323
+  Polarity 0
+Sink 4
+  Location (7130,6340)
+  Capacitance 0.001000
+  Req 2.896430
+  Polarity 0
+Sink 5
+  Location (7240,4470)
+  Capacitance 0.001000
+  Req 3.035534
+  Polarity 0
+Sink 6
+  Location (9170,3120)
+  Capacitance 0.001000
+  Req 3.121877
+  Polarity 0
+Sink 7
+  Location (7310,200)
+  Capacitance 0.001000
+  Req 3.154353
+  Polarity 0
+Sink 8
+  Location (7690,1200)
+  Capacitance 0.001000
+  Req 3.150470
+  Polarity 0
+Sink 9
+  Location (9140,7080)
+  Capacitance 0.001000
+  Req 2.849758
+  Polarity 0

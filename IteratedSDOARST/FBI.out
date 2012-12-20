@@ -1,0 +1,168 @@
+wire_res_per_unit 0.076
+wire_cap_per_unit 0.118
+
+driver 1280 6020 440
+number_of_sinks 29
+sink 1 480 6220 1 2943.86
+sink 2 1760 4120 1 3396.55
+sink 3 2030 4920 1 3420.47
+sink 4 3250 8190 1 3292.81
+sink 5 3490 9010 1 3335.16
+sink 6 4290 9070 1 3362.06
+sink 7 6500 9900 1 3403.73
+sink 8 3010 4600 1 3689.05
+sink 9 2980 4080 1 3704.79
+sink 10 3760 4220 1 3841.67
+sink 11 1780 2160 1 3442.29
+sink 12 2160 850 1 3465.07
+sink 13 2800 2270 1 3757.38
+sink 14 3500 2130 1 3762.78
+sink 15 4680 2430 1 4076.78
+sink 16 4920 2530 1 4076.23
+sink 17 5090 3140 1 4034.95
+sink 18 6670 4380 1 3942.31
+sink 19 9920 4640 1 3994.03
+sink 20 6330 610 1 4199.49
+sink 21 7260 970 1 4227.08
+sink 22 7480 1160 1 4223.68
+sink 23 8920 790 1 4245.12
+sink 24 9090 930 1 4245.16
+sink 25 3110 670 1 3771.74
+sink 26 1220 1530 1 3059.8
+sink 27 580 180 1 3134.57
+sink 28 240 2410 1 3048.24
+sink 29 170 6410 1 2945.02
+
+number_of_candidate_nodes 51
+candidate 30 1020 5770
+candidate 31 480 6020
+candidate 32 1020 6020
+candidate 33 1760 4920
+candidate 34 1760 6020
+candidate 35 2840 6640
+candidate 36 2840 6020
+candidate 37 3250 6640
+candidate 38 3490 8190
+candidate 39 4290 9010
+candidate 40 4400 9380
+candidate 41 4400 9070
+candidate 42 6500 9380
+candidate 43 2880 4600
+candidate 44 2880 4920
+candidate 45 2980 4600
+candidate 46 2980 4220
+candidate 47 1780 4120
+candidate 48 1960 1230
+candidate 49 1960 2160
+candidate 50 2160 1230
+candidate 51 2370 1230
+candidate 52 2800 1230
+candidate 53 3490 2130
+candidate 54 2800 2130
+candidate 55 4680 2130
+candidate 56 4920 2430
+candidate 57 5240 2130
+candidate 58 5240 2530
+candidate 59 5090 2530
+candidate 60 5380 4250
+candidate 61 5380 3140
+candidate 62 6670 4250
+candidate 63 9750 4500
+candidate 64 9750 4380
+candidate 65 5380 1200
+candidate 66 5380 2130
+candidate 67 6330 1200
+candidate 68 6330 970
+candidate 69 7480 970
+candidate 70 7480 790
+candidate 71 9090 790
+candidate 72 3110 850
+candidate 73 440 5770
+candidate 74 1020 340
+candidate 75 1020 1530
+candidate 76 580 340
+candidate 77 240 5770
+candidate 78 170 6220
+candidate 79 480 5770
+candidate 80 9920 4500
+
+edge 0 32
+edge 31 1
+edge 32 30
+edge 34 33
+edge 33 2
+edge 33 3
+edge 0 34
+edge 34 36
+edge 36 35
+edge 35 37
+edge 37 4
+edge 4 38
+edge 38 5
+edge 5 39
+edge 39 6
+edge 6 41
+edge 41 40
+edge 40 42
+edge 42 7
+edge 3 44
+edge 44 43
+edge 45 8
+edge 43 45
+edge 46 9
+edge 45 46
+edge 46 10
+edge 2 47
+edge 47 11
+edge 11 49
+edge 49 48
+edge 50 12
+edge 48 50
+edge 50 51
+edge 51 52
+edge 54 13
+edge 52 54
+edge 54 53
+edge 53 14
+edge 14 55
+edge 55 15
+edge 15 56
+edge 56 16
+edge 16 59
+edge 59 58
+edge 58 57
+edge 59 17
+edge 17 61
+edge 61 60
+edge 60 62
+edge 62 18
+edge 18 64
+edge 64 63
+edge 57 66
+edge 66 65
+edge 65 67
+edge 68 20
+edge 67 68
+edge 68 21
+edge 21 69
+edge 69 22
+edge 69 70
+edge 70 23
+edge 23 71
+edge 71 24
+edge 12 72
+edge 72 25
+edge 75 74
+edge 74 76
+edge 76 27
+edge 73 77
+edge 77 28
+edge 1 78
+edge 78 29
+edge 30 75
+edge 75 26
+edge 30 79
+edge 79 73
+edge 79 31
+edge 63 80
+edge 80 19
