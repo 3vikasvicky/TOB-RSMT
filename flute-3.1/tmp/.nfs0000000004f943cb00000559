@@ -1,0 +1,285 @@
+
+Gurobi 4.5.0 (linux64) logging started Thu Nov  3 20:29:33 2011
+
+
+ERROR: Unable to open Gurobi license file '/home/polaris/yzhang1/opt/gurobi450/linux64/../gurobi_eda11.lic'
+
+
+
+Gurobi 4.5.0 (linux64) logging started Thu Nov  3 20:33:54 2011
+
+
+ERROR: Unable to open Gurobi license file '/home/polaris/yzhang1/opt/gurobi450/linux64/../gurobi_eda11.lic'
+ERROR: Unable to open Gurobi license file '/home/polaris/yzhang1/opt/gurobi450/linux64/../gurobi_eda11.lic'
+
+
+
+Gurobi 4.5.0 (linux64) logging started Thu Nov  3 20:35:41 2011
+
+
+ERROR: Unable to open Gurobi license file '/home/polaris/yzhang1/opt/gurobi450/linux64/../gurobi_eda11.lic'
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+Reading time = 0.00 seconds
+(null): 8 rows, 14 columns, 33 nonzeros
+(null): 8 rows, 14 columns, 33 nonzeros
+
+Statistics for model Unnamed :
+  Sizes                       : 8 Constrs, 14 Vars, 33 NZs
+  Variable types              : 6 Continuous, 8 Integer (8 Binary)
+  Matrix coefficient range    : [ 1, 700 ]
+  Objective coefficient range : [ 1, 65 ]
+  RHS coefficient range       : [ 1, 12.5 ]
+Changed value of parameter TimeLimit to 200.0
+   Prev: 1e+100   Min: 0.0   Max: 1e+100   Default: 1e+100
+Parameter MIPGap unchanged
+   Value: 0.0001   Min: 0.0   Max: 1e+100   Default: 0.0001
+Optimize a model with 8 rows, 14 columns and 33 nonzeros
+Optimize a model with 8 rows, 14 columns and 33 nonzeros
+Presolve removed 8 rows and 14 columns
+Presolve removed 8 rows and 14 columns
+Presolve time: 0.00s
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 2 available processors)
+Thread count was 1 (of 2 available processors)
+
+
+Optimal solution found (tolerance 1.00e-04)
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Thu Nov  3 22:22:11 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+(null): 7 rows, 12 columns, 28 nonzeros
+
+Statistics for model Unnamed :
+  Sizes                       : 7 Constrs, 12 Vars, 28 NZs
+  Variable types              : 5 Continuous, 7 Integer (7 Binary)
+  Matrix coefficient range    : [ 1, 700 ]
+  Objective coefficient range : [ 1, 65 ]
+  RHS coefficient range       : [ 1, 12.5 ]
+Changed value of parameter TimeLimit to 200.0
+   Prev: 1e+100   Min: 0.0   Max: 1e+100   Default: 1e+100
+Parameter MIPGap unchanged
+   Value: 0.0001   Min: 0.0   Max: 1e+100   Default: 0.0001
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.00s
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+Thread count was 1 (of 2 available processors)
+Thread count was 1 (of 2 available processors)
+
+
+Optimal solution found (tolerance 1.00e-04)
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Thu Nov  3 22:57:01 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+(null): 7 rows, 12 columns, 28 nonzeros
+
+Statistics for model Unnamed :
+  Sizes                       : 7 Constrs, 12 Vars, 28 NZs
+  Variable types              : 5 Continuous, 7 Integer (7 Binary)
+  Matrix coefficient range    : [ 1, 700 ]
+  Objective coefficient range : [ 1, 65 ]
+  RHS coefficient range       : [ 1, 12.5 ]
+Changed value of parameter TimeLimit to 200.0
+   Prev: 1e+100   Min: 0.0   Max: 1e+100   Default: 1e+100
+Parameter MIPGap unchanged
+   Value: 0.0001   Min: 0.0   Max: 1e+100   Default: 0.0001
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.00s
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 2 available processors)
+Thread count was 1 (of 2 available processors)
+
+
+Optimal solution found (tolerance 1.00e-04)
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Sat Nov  5 17:55:04 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+(null): 7 rows, 12 columns, 28 nonzeros
+
+Statistics for model Unnamed :
+  Sizes                       : 7 Constrs, 12 Vars, 28 NZs
+  Variable types              : 5 Continuous, 7 Integer (7 Binary)
+  Matrix coefficient range    : [ 1, 700 ]
+  Objective coefficient range : [ 1, 65 ]
+  RHS coefficient range       : [ 1, 12.5 ]
+Changed value of parameter TimeLimit to 200.0
+   Prev: 1e+100   Min: 0.0   Max: 1e+100   Default: 1e+100
+Parameter MIPGap unchanged
+   Value: 0.0001   Min: 0.0   Max: 1e+100   Default: 0.0001
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.00s
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+Thread count was 1 (of 2 available processors)
+Thread count was 1 (of 2 available processors)
+
+
+Optimal solution found (tolerance 1.00e-04)
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Sat Nov  5 20:53:30 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+(null): 7 rows, 12 columns, 28 nonzeros
+
+Statistics for model Unnamed :
+  Sizes                       : 7 Constrs, 12 Vars, 28 NZs
+  Variable types              : 5 Continuous, 7 Integer (7 Binary)
+  Matrix coefficient range    : [ 1, 700 ]
+  Objective coefficient range : [ 1, 65 ]
+  RHS coefficient range       : [ 1, 12.5 ]
+Changed value of parameter TimeLimit to 200.0
+   Prev: 1e+100   Min: 0.0   Max: 1e+100   Default: 1e+100
+Parameter MIPGap unchanged
+   Value: 0.0001   Min: 0.0   Max: 1e+100   Default: 0.0001
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.00s
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 2 available processors)
+Thread count was 1 (of 2 available processors)
+
+
+Optimal solution found (tolerance 1.00e-04)
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Sat Nov  5 20:55:55 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+(null): 7 rows, 12 columns, 28 nonzeros
+
+Statistics for model Unnamed :
+  Sizes                       : 7 Constrs, 12 Vars, 28 NZs
+  Variable types              : 5 Continuous, 7 Integer (7 Binary)
+  Matrix coefficient range    : [ 1, 700 ]
+  Objective coefficient range : [ 1, 65 ]
+  RHS coefficient range       : [ 1, 12.5 ]
+Changed value of parameter TimeLimit to 200.0
+   Prev: 1e+100   Min: 0.0   Max: 1e+100   Default: 1e+100
+Parameter MIPGap unchanged
+   Value: 0.0001   Min: 0.0   Max: 1e+100   Default: 0.0001
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.01s
+Presolve time: 0.01s
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+Thread count was 1 (of 2 available processors)
+Thread count was 1 (of 2 available processors)
+
+
+Optimal solution found (tolerance 1.00e-04)
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Sat Nov  5 22:00:09 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%
+
+Gurobi 4.5.2 (linux64) logging started Sat Nov  5 22:11:03 2011
+
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+Read LP format model from file /home/polaris/yzhang1/Dropbox/papers/Oracle/2_routing with obstacles/Implementation/flute-3.1/flute-3.1/tmp/problem.lp
+Reading time = 0.00 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+Read LP format model from file problem.lp
+Reading time = 0.03 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+Read LP format model from file problem.lp
+Reading time = 0.65 seconds
+(null): 7 rows, 12 columns, 28 nonzeros
+Optimize a model with 7 rows, 12 columns and 28 nonzeros
+Presolve removed 7 rows and 12 columns
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0%

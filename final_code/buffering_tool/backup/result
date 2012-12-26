@@ -1,0 +1,13 @@
+RC1
+The min slew is 5.40551e+07. The max slew is 3.33149e+08. The slew spec is 280000
+
+Under 1 mode, Root has 6 solutions
+They have c, w, s as:
+442 49 214628
+1 50 0
+453 48 225444
+1 49 0
+431 48 204078
+1 49 0
+Best solution uses 48 buffers
+

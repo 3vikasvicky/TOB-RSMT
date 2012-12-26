@@ -1,0 +1,8 @@
+set arrow from 25.000000,35.000000 to 40.000000,35.000000 nohead
+set arrow from 40.000000,35.000000 to 40.000000,20.000000 nohead
+set arrow from 50.000000,35.000000 to 40.000000,35.000000 nohead
+set object 1 rect from 20,20 to 80,45 fc ls 2 fs pattern 1 bo -1
+set object 2 rect from 40,45 to 65,50 fc ls 2 fs pattern 1 bo -1
+set xrange [ 20 : 80 ]
+plot x with dots
+pause -1

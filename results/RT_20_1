@@ -1,0 +1,6 @@
+The min slew is 6.79513. The max slew is 920.028. The slew spec is 189.442
+Under 0 mode, Root has 1 solutions
+They have c, w, s as:
+6 151 38.4514
+omit_mode_buffering_cpu_time is 0
+legitimate_cpu_time is 0.01

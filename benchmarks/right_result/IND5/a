@@ -1,0 +1,207 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Oct27 ?        00:01:11 init [2]         
+root         2     0  0 Oct27 ?        00:00:18 [kthreadd]
+root         3     2  0 Oct27 ?        00:00:47 [ksoftirqd/0]
+root         6     2  0 Oct27 ?        00:00:00 [migration/0]
+root         7     2  0 Oct27 ?        00:00:01 [watchdog/0]
+root         8     2  0 Oct27 ?        00:00:00 [migration/1]
+root        10     2  0 Oct27 ?        00:01:33 [ksoftirqd/1]
+root        12     2  0 Oct27 ?        00:00:44 [watchdog/1]
+root        13     2  0 Oct27 ?        00:00:00 [cpuset]
+root        14     2  0 Oct27 ?        00:00:00 [khelper]
+root        15     2  0 Oct27 ?        00:00:00 [netns]
+root        16     2  0 Oct27 ?        00:00:08 [sync_supers]
+root        17     2  0 Oct27 ?        00:00:00 [bdi-default]
+root        18     2  0 Oct27 ?        00:00:00 [kintegrityd]
+root        19     2  0 Oct27 ?        00:00:00 [kblockd]
+root        21     2  0 Oct27 ?        00:00:03 [khungtaskd]
+root        22     2  0 Oct27 ?        00:16:53 [kswapd0]
+root        23     2  0 Oct27 ?        00:00:00 [ksmd]
+root        24     2  0 Oct27 ?        00:00:00 [khugepaged]
+root        25     2  0 Oct27 ?        00:00:00 [fsnotify_mark]
+root        26     2  0 Oct27 ?        00:00:00 [crypto]
+root       236     2  0 Oct27 ?        00:00:00 [khubd]
+root       238     2  0 Oct27 ?        00:00:00 [ata_sff]
+root       245     2  0 Oct27 ?        00:00:00 [scsi_eh_0]
+root       246     2  0 Oct27 ?        00:01:49 [scsi_eh_1]
+root       259     2  0 Oct27 ?        00:00:00 [scsi_eh_2]
+root       260     2  0 Oct27 ?        00:00:00 [scsi_eh_3]
+root       325     2  0 Oct27 ?        00:02:09 [jbd2/sda1-8]
+root       326     2  0 Oct27 ?        00:00:00 [ext4-dio-unwrit]
+root       454     1  0 Oct27 ?        00:00:00 udevd --daemon
+root       616     2  0 Oct27 ?        00:00:00 [kpsmoused]
+root       727     2  0 Oct27 ?        00:00:00 [hd-audio0]
+root      1086     2  0 Oct27 ?        00:00:00 [jbd2/sda2-8]
+root      1087     2  0 Oct27 ?        00:00:00 [ext4-dio-unwrit]
+root      1177     2  0 Oct27 ?        00:02:16 [flush-8:0]
+root      1191     1  0 Oct27 ?        00:00:00 dhclient -v -pf /var/run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases eth0
+yzhang1   1208  7076  0 Dec01 ?        00:00:15 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+daemon    1246     1  0 Oct27 ?        00:00:01 /sbin/portmap
+statd     1259     1  0 Oct27 ?        00:00:00 /sbin/rpc.statd
+root      1263     2  0 Oct27 ?        00:00:00 [rpciod]
+root      1265     2  0 Oct27 ?        00:00:00 [nfsiod]
+root      1271     1  0 Oct27 ?        00:00:05 /usr/sbin/rpc.idmapd
+root      1797     1  0 Oct27 ?        00:00:03 /usr/sbin/rsyslogd -c4
+root      1798     1  0 Oct27 ?        00:00:19 /usr/sbin/nscd
+root      1848     2  0 Oct27 ?        00:00:00 [lockd]
+root      1849     2  0 Oct27 ?        00:00:00 [nfsd4]
+root      1850     2  0 Oct27 ?        00:00:00 [nfsd4_callbacks]
+root      1851     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1852     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1853     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1854     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1855     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1856     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1857     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1858     2  0 Oct27 ?        00:00:00 [nfsd]
+root      1864     1  0 Oct27 ?        00:00:00 /usr/sbin/rpc.mountd --manage-gids
+root      1881     1  0 Oct27 ?        00:00:30 /usr/sbin/ypbind -no-dbus
+daemon    1915     1  0 Oct27 ?        00:00:00 /usr/sbin/atd
+root      2022     1  0 Oct27 ?        00:02:04 /usr/sbin/acpid
+yzhang1   2289     1  0 Dec01 ?        00:00:00 /usr/lib/evince/evinced
+103       2337     1  0 Oct27 ?        00:00:05 /usr/bin/dbus-daemon --system
+101       2355     1  0 Oct27 ?        00:00:02 /usr/sbin/exim4 -bd -q30m
+clamav    2365     1  0 Oct27 ?        00:10:10 /usr/bin/freshclam -d --quiet
+root      2388     1  0 Oct27 ?        00:00:00 /usr/sbin/gdm3
+root      2406     1  0 Oct27 ?        00:06:45 /usr/sbin/automount
+root      2471     1  0 Oct27 ?        00:00:14 /usr/sbin/cron
+ntp       2554     1  0 Oct27 ?        00:06:06 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 111:118
+root      2575     1  0 Oct27 ?        00:00:02 /usr/sbin/console-kit-daemon --no-daemon
+rwhod     2654     1  0 Oct27 ?        00:01:08 /usr/sbin/rwhod -b
+rwhod     2657  2654  0 Oct27 ?        00:00:03 /usr/sbin/rwhod -b
+root      2680     1  0 Oct27 ?        00:00:00 /usr/sbin/sshd
+root      2704     1  0 Oct27 ?        00:06:17 /usr/sbin/sshguard -i /var/run/sshguard.pid -l /var/log/auth.log -w /etc/sshguard/whitelist -a 40 -p 420 -s 1200
+root      2794     1  0 Oct27 tty1     00:00:00 /sbin/getty 38400 tty1
+root      2795     1  0 Oct27 tty2     00:00:00 /sbin/getty 38400 tty2
+root      2796     1  0 Oct27 tty3     00:00:00 /sbin/getty 38400 tty3
+root      2797     1  0 Oct27 tty4     00:00:00 /sbin/getty 38400 tty4
+root      2798     1  0 Oct27 tty5     00:00:00 /sbin/getty 38400 tty5
+root      2799     1  0 Oct27 tty6     00:00:00 /sbin/getty 38400 tty6
+root      2807     1  0 Oct27 ?        00:00:00 /usr/lib/policykit-1/polkitd
+root      2811     1  0 Oct27 ?        00:00:00 /usr/lib/upower/upowerd
+root      2943     2  0 Oct27 ?        00:00:00 [kauditd]
+root      3077     1  0 Oct27 ?        00:00:54 /usr/lib/udisks/udisks-daemon
+root      3079  3077  0 Oct27 ?        00:04:39 udisks-daemon: polling /dev/sr0
+yzhang1   3303  7069  0 Dec01 ?        00:02:06 /opt/google/chrome/chrome --type=plugin --plugin-path=/opt/google/talkplugin/libnpgoogletalk64.so --lang=en-US --channel=7069.0x7fc6e7c4d000.317815064
+yzhang1   3306     1  0 Dec01 ?        00:01:01 /opt/google/talkplugin/GoogleTalkPlugin
+yzhang1   3664  7076  0 Dec01 ?        00:00:03 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   4027  7076  0 Nov26 ?        00:04:24 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   4416  7076  0 Nov29 ?        00:00:10 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   4569     1  0 Nov26 ?        00:00:00 /bin/sh /usr/bin/libreoffice --impress /home/polaris/yzhang1/Dropbox/papers/presentations/Steiner Tree on Obstacles_Oracle_10_24-1.odp
+yzhang1   4570  4569  0 Nov26 ?        00:00:03 /usr/lib/libreoffice/program/oosplash.bin --impress /home/polaris/yzhang1/Dropbox/papers/presentations/Steiner Tree on Obstacles_Oracle_10_24-1.odp
+yzhang1   4582  4570  1 Nov26 ?        03:08:03 /usr/lib/libreoffice/program/soffice.bin --impress /home/polaris/yzhang1/Dropbox/papers/presentations/Steiner Tree on Obstacles_Oracle_10_24-1.odp --splash-pipe=7
+yzhang1   5518  7076  0 Nov19 ?        00:07:19 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+root      5739     1  0 Oct27 ?        07:05:34 /usr/sbin/samhain
+yzhang1   6222  7076  0 Nov29 ?        00:00:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   6474  7076  0 Nov29 ?        00:00:05 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   6519  7076  0 Nov29 ?        00:01:36 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   6797  7076  0 Nov29 ?        00:00:28 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1   7069     1  1 Nov17 ?        04:49:42 /opt/google/chrome/google-chrome
+yzhang1   7074  7069  0 Nov17 ?        00:10:22 /opt/google/chrome/google-chrome
+yzhang1   7076     1  0 Nov17 ?        00:00:01 /opt/google/chrome/chrome --type=zygote
+yzhang1   7078  7076  0 Nov17 ?        00:00:00 /opt/google/chrome/nacl_helper_bootstrap /opt/google/chrome/nacl_helper --at-zero
+yzhang1   7181  7069  4 Nov17 ?        17:28:23 /opt/google/chrome/chrome --type=plugin --plugin-path=/usr/lib/flashplugin-nonfree/libflashplayer.so --lang=en-US --channel=7069.0x7fc6e7ecdb00.1198987585
+yzhang1   7188  7069  0 Nov17 ?        00:15:40 [chrome] <defunct>
+yzhang1   7325     1  0 10:26 pts/3    00:00:00 gnuplot_x11 -persist
+yzhang1   7430     1  0 10:26 pts/3    00:00:00 gnuplot_x11 -persist
+root      7477     1  0 Nov29 ?        00:00:00 /usr/sbin/smartd --pidfile /var/run/smartd.pid
+yzhang1   8349     1  0 10:44 pts/1    00:00:00 gnuplot_x11 -persist
+yzhang1   8454     1  0 10:44 pts/1    00:00:00 gnuplot_x11 -persist
+root      8731  2388  0 Nov03 ?        00:00:00 /usr/lib/gdm3/gdm-simple-slave --display-id /org/gnome/DisplayManager/Display1
+root      8732  8731  1 Nov03 tty9     12:01:20 /usr/bin/Xorg :0 -br -verbose -audit 0 -novtswitch -dpi 96 -auth /var/run/gdm3/auth-for-Debian-gdm-Oj8Sgv/database -nolisten tcp vt9
+119       8776     1  0 Nov03 ?        00:00:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+root      8779  8731  0 Nov03 ?        00:00:00 /usr/lib/gdm3/gdm-session-worker
+yzhang1   8795     1  0 Nov03 ?        00:00:01 /usr/bin/gnome-keyring-daemon --daemonize --login
+yzhang1   8813  8779  0 Nov03 ?        00:00:06 x-session-manager
+yzhang1   8861     1  0 Nov03 ?        00:02:41 /usr/bin/ibus-daemon --daemonize --xim
+yzhang1   8865  8861  0 Nov03 ?        00:00:00 /usr/lib/ibus/ibus-gconf
+yzhang1   8867  8861  0 Nov03 ?        00:02:10 python /usr/share/ibus/ui/gtk/main.py
+yzhang1   8869     1  0 Nov03 ?        00:00:04 /usr/lib/ibus/ibus-x11 --kill-daemon
+yzhang1   8873     1  0 Nov03 ?        00:00:00 dbus-launch --autolaunch f20158de8782e5beeee302f34ade490a --binary-syntax --close-stderr
+yzhang1   8874     1  0 Nov03 ?        00:00:00 /usr/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+yzhang1   8876     1  0 Nov03 ?        00:00:12 /usr/lib/libgconf2-4/gconfd-2
+yzhang1   8877  8813  0 Nov03 ?        00:00:25 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/seahorse-agent --execute x-session-manager
+yzhang1   8880     1  0 Nov03 ?        00:00:00 /usr/bin/dbus-launch --exit-with-session /usr/bin/seahorse-agent --execute x-session-manager
+yzhang1   8881     1  0 Nov03 ?        00:00:09 /usr/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+yzhang1   8891  8813  0 Nov03 ?        00:00:00 /usr/bin/seahorse-agent --execute x-session-manager
+yzhang1   8893     1  0 Nov03 ?        00:00:00 /usr/lib/gvfs/gvfsd
+yzhang1   8897     1  0 Nov03 ?        00:00:31 /usr/lib/libgconf2-4/gconfd-2
+yzhang1   8905  8813  0 Nov03 ?        00:00:23 gnome-power-manager
+yzhang1   8907     1  0 Nov03 ?        00:02:30 /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+yzhang1   8909  8813  0 Nov03 ?        00:06:32 /usr/bin/metacity
+yzhang1   8913  8813  0 Nov03 ?        00:19:18 gnome-panel
+yzhang1   8915     1  0 Nov03 ?        00:00:04 /usr/lib/gvfs/gvfs-gdu-volume-monitor
+yzhang1   8917     1  0 Nov03 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+yzhang1   8919     1  0 Nov03 ?        00:04:20 /usr/lib/gvfs/gvfs-afc-volume-monitor
+yzhang1   8921  8813  0 Nov03 ?        00:50:29 nautilus
+yzhang1   8923     1  0 Nov03 ?        00:00:00 /usr/lib/bonobo-activation/bonobo-activation-server --ac-activate --ior-output-fd=18
+yzhang1   8932  8813  0 Nov03 ?        00:00:01 gnome-volume-control-applet
+yzhang1   8933  8813  0 Nov03 ?        00:00:00 bluetooth-applet
+yzhang1   8934  8813  0 Nov03 ?        00:00:00 /usr/lib/evolution/2.30/evolution-alarm-notify
+yzhang1   8935  8813  0 Nov03 ?        00:00:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+yzhang1   8936  8813  0 Nov03 ?        00:01:07 python /usr/bin/system-config-printer-applet
+yzhang1   8937     1  0 Nov21 ?        01:20:19 /var/lib/dropbox/.dropbox-dist/dropbox /corruptdb
+yzhang1   8938  8813  0 Nov03 ?        00:00:01 /usr/lib/gnome-disk-utility/gdu-notification-daemon
+yzhang1   8951     1  0 Nov03 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+yzhang1   8953     1  0 Nov03 ?        00:00:31 gnome-screensaver
+yzhang1   8960     1  0 Nov03 ?        00:00:01 /usr/lib/gnome-applets/mixer_applet2 --oaf-activate-iid=OAFIID:GNOME_MixerApplet_Factory --oaf-ior-fd=18
+yzhang1   8962     1  0 Nov03 ?        00:00:00 /usr/lib/evolution/e-calendar-factory
+yzhang1   8967     1  0 Nov03 ?        00:00:01 /usr/lib/gvfs/gvfsd-trash --spawner :1.1 /org/gtk/gvfs/exec_spaw/0
+yzhang1   9018     1  0 Nov03 ?        00:00:01 /usr/lib/gvfs/gvfsd-metadata
+yzhang1   9035     1  0 Nov03 ?        00:00:00 /usr/lib/gvfs/gvfsd-burn --spawner :1.1 /org/gtk/gvfs/exec_spaw/1
+root      9136     2  0 10:50 ?        00:00:02 [kworker/0:1]
+yzhang1   9921 24498  0 10:57 pts/1    00:00:00 gdb roo
+yzhang1  10957  9921  0 11:00 pts/1    00:00:00 [roo] <defunct>
+root     11519     2  0 11:11 ?        00:00:01 [kworker/1:2]
+root     12024     2  0 11:13 ?        00:00:00 [kworker/0:2]
+root     12033     2  0 11:16 ?        00:00:00 [kworker/1:1]
+root     12194     2  0 11:19 ?        00:00:00 [kworker/0:0]
+root     12222     2  0 11:21 ?        00:00:00 [kworker/1:0]
+yzhang1  12225 24542  0 11:22 pts/4    00:00:00 ps -aef
+root     12672     2  0 Oct28 ?        00:00:00 [nfsv4.0-svc]
+root     12799     2  0 Oct28 ?        00:16:01 [flush-0:27]
+yzhang1  14277  7076  0 Nov30 ?        00:13:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  14913     1  0 Dec02 ?        00:00:08 evince /home/polaris/yzhang1/utda-share/utda-paper/dac11-moongon/main.pdf
+yzhang1  15516  7076  0 Dec02 ?        00:00:05 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  17166  8937  0 Nov14 ?        00:00:00 [dropbox] <defunct>
+root     18646     1  0 Nov30 ?        00:00:17 /usr/sbin/cupsd -C /etc/cups/cupsd.conf
+root     19934     2  0 Dec03 ?        00:00:07 [kworker/u:1]
+yzhang1  22888     1  0 Nov25 ?        00:42:49 texmaker /home/polaris/yzhang1/Implementation/writing_paper/my_paper.tex
+yzhang1  24076     1  0 Nov25 ?        00:00:00 /usr/lib/gvfs/gvfsd-network --spawner :1.1 /org/gtk/gvfs/exec_spaw/2
+yzhang1  24078     1  0 Nov25 ?        00:00:00 /usr/lib/gvfs/gvfsd-smb-browse --spawner :1.1 /org/gtk/gvfs/exec_spaw/3
+yzhang1  24082     1  0 Nov25 ?        00:00:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.1 /org/gtk/gvfs/exec_spaw/4
+yzhang1  24220  7076  0 Dec03 ?        00:00:34 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  24233  7076  0 Dec03 ?        00:00:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  24498 28069  0 Dec03 pts/1    00:00:00 -csh
+yzhang1  24522 28069  0 Dec03 pts/3    00:00:00 -csh
+yzhang1  24542 28069  0 Dec03 pts/4    00:00:00 -csh
+yzhang1  24562 28069  0 Dec03 pts/5    00:00:00 -csh
+yzhang1  24807 24562  0 Dec03 pts/5    00:00:00 vim BinaryHeap.h
+root     24902     2  0 Dec03 ?        00:00:02 [kworker/u:0]
+yzhang1  25667 28069  0 Dec03 pts/6    00:00:00 -csh
+yzhang1  26848  7076  0 Dec01 ?        00:01:38 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  26864  7076  0 Dec01 ?        00:00:05 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  26870  7076  0 Dec01 ?        00:03:09 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  27606  7076  0 Dec01 ?        00:03:33 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  27634  7076  0 Dec01 ?        00:00:07 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  27640  7076  0 Dec01 ?        00:01:33 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  27648  7076  0 Dec01 ?        00:00:12 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  27722  7076  0 Dec01 ?        00:01:11 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  27881  7076  0 Dec01 ?        00:00:02 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  28069     1  0 Dec01 ?        00:00:46 gnome-terminal
+yzhang1  28076 28069  0 Dec01 ?        00:00:00 gnome-pty-helper
+yzhang1  28078 28069  0 Dec01 pts/2    00:00:00 -csh
+yzhang1  28141 28078  0 Dec01 pts/2    00:00:32 vim roo.cpp
+yzhang1  28255  7076  0 Dec01 ?        00:01:30 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  28261  7076  0 Dec01 ?        00:00:07 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  28283  7076  0 Dec01 ?        00:00:09 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  28523     1  0 Dec03 ?        00:00:00 /usr/lib/gvfs/gvfsd-http --spawner :1.1 /org/gtk/gvfs/exec_spaw/5
+yzhang1  28548  7076  0 Dec03 ?        00:00:24 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  28773  7076  0 Nov28 ?        00:01:23 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  30070  7076  0 Dec03 ?        00:00:35 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  30386  7076  0 Dec01 ?        00:01:03 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+yzhang1  30791  7076  0 Dec01 ?        00:00:27 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtest=ConnCountImpact/conn_count_6/ConnnectBackupJobs/ConnectBackupJobsEnabled/DnsImpact/default_enabled_prefetch/DnsParal
+root     31013   454  0 Nov08 ?        00:00:00 udevd --daemon
+root     31014   454  0 Nov08 ?        00:00:00 udevd --daemon
+root     31015     2  0 Nov08 ?        00:00:00 [iprt]
+yzhang1  31867     1  0 Nov26 ?        00:00:52 gedit /home/polaris/yzhang1/Implementation/writing_paper/dac11-Yilin/dpan_arp09.bib

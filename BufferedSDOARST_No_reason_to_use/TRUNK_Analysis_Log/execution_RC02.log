@@ -1,0 +1,384 @@
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+argv[1] = benchOARST_Timing/RC02_T.net
+argv[2] = Table/table.log
+argv[3] = CapUpperBound.cap
+
+-------------Read file-----------
+Open file = benchOARST_Timing/RC02_T.net
+# of Sink = 29 (not include driver)
+Driver 1280 6020 3 0.000000
+10
+
+--[Read Input File]
+# of Obstacles   = 10
+# of Pins        = 30
+(MinX,MinY) = (0,0)
+(MaxX,MaxY) = (9920,9970)
+Buttom Layer Num = 3
+Top    Layer Num = 3
+W of Grid = 100 (just for displaying usage)
+L of Grid = 100 (just for displaying usage)
+
+--[Display Parameters of Elmore Delay Model]
+unit_r   = 0.076 (ohms/um)
+unit_c   = 0.118 (Ff/um)
+Rd       = 440  (ohms)
+Driver's arrival time = 0  (ps)
+Capacitance Upper Bound is 410.000000
+
+-------------init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 30
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 70
+
+--[Start OASG Construction]
+# of Sweep Entry = 70
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 300
+# of SGEdge = 150 (no dual edges)
+# of SGNode = 70
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (1280,6020,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 360.693776)
+N(0.000000; 0.000000)
+NN:(0.000000; 1678.689965)
+N(0.000000; 0.000000)
+NN:(0.000000; 1331.352696)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 1331.352696)
+NN:(1331.352696; 2175.686753)
+N(1331.352696; 1331.352696)
+NN:(1331.352696; 2229.461820)
+N(1331.352696; 1331.352696)
+NN:(1331.352696; 2239.592752)
+N(1331.352696; 1331.352696)
+BUFFERED!!!!!!!!!(1331.352696; 2239.592752)
+NN:(2239.592752; 2369.592752)
+N(2239.592752; 2239.592752)
+NN:(2239.592752; 2769.120844)
+N(2239.592752; 2239.592752)
+BUFFERED!!!!!!!!!(2239.592752; 2369.592752)
+NN:(2369.592752; 3210.366205)
+N(2369.592752; 2369.592752)
+BUFFERED!!!!!!!!!(2369.592752; 3210.366205)
+NN:(3210.366205; 3688.382941)
+N(3210.366205; 3210.366205)
+BUFFERED!!!!!!!!!(3210.366205; 3688.382941)
+NN:(3688.382941; 4052.388436)
+N(3688.382941; 3688.382941)
+BUFFERED!!!!!!!!!(3688.382941; 4052.388436)
+NN:(4052.388436; 5063.773625)
+N(4052.388436; 4052.388436)
+NN:(4052.388436; 5577.413026)
+N(4052.388436; 4052.388436)
+BUFFERED!!!!!!!!!(4052.388436; 5577.413026)
+NN:(5577.413026; 6210.658634)
+N(5577.413026; 5577.413026)
+BUFFERED!!!!!!!!!(5577.413026; 6210.658634)
+NN:(6210.658634; 6722.908573)
+N(6210.658634; 6210.658634)
+BUFFERED!!!!!!!!!(6210.658634; 6722.908573)
+NN:(6722.908573; 7663.387174)
+N(6722.908573; 6722.908573)
+BUFFERED!!!!!!!!!(6722.908573; 7663.387174)
+NN:(7663.387174; 8781.689459)
+N(7663.387174; 7663.387174)
+NN:(7663.387174; 9778.935667)
+N(7663.387174; 8781.689459)
+NN:(7663.387174; 10069.624505)
+N(7663.387174; 9778.935667)
+NN:(7663.387174; 11450.204093)
+N(7663.387174; 10069.624505)
+NN:(7663.387174; 11556.399538)
+N(7663.387174; 10069.624505)
+NN:(7663.387174; 11713.263022)
+N(7663.387174; 11450.204093)
+NN:(7663.387174; 11804.887050)
+N(7663.387174; 11450.204093)
+NN:(4052.388436; 6360.307465)
+N(4052.388436; 5063.773625)
+NN:(4052.388436; 9442.644241)
+N(4052.388436; 6360.307465)
+NN:(4052.388436; 8554.162520)
+N(4052.388436; 6360.307465)
+NN:(4052.388436; 8815.887566)
+N(4052.388436; 8554.162520)
+NN:(4052.388436; 9890.862938)
+N(4052.388436; 9442.644241)
+NN:(4052.388436; 9662.871397)
+N(4052.388436; 9442.644241)
+NN:(4052.388436; 12870.862938)
+N(4052.388436; 9890.862938)
+NN:(1331.352696; 3399.461820)
+N(1331.352696; 2229.461820)
+BUFFERED!!!!!!!!!(1331.352696; 2175.686753)
+NN:(2175.686753; 3500.865986)
+N(2175.686753; 2175.686753)
+NN:(2175.686753; 4821.381368)
+N(2175.686753; 2175.686753)
+NN:(2175.686753; 6028.071055)
+N(2175.686753; 4821.381368)
+NN:(2175.686753; 6608.071055)
+N(2175.686753; 6028.071055)
+NN:(2175.686753; 6496.259052)
+N(2175.686753; 6028.071055)
+BUFFERED!!!!!!!!!(2175.686753; 3500.865986)
+NN:(3500.865986; 4175.328735)
+N(3500.865986; 3500.865986)
+NN:(3500.865986; 3910.865986)
+N(3500.865986; 3500.865986)
+NN:(3500.865986; 4601.155780)
+N(3500.865986; 3910.865986)
+NN:(3500.865986; 5305.215437)
+N(3500.865986; 4601.155780)
+NN:(3500.865986; 5315.215437)
+N(3500.865986; 5305.215437)
+NN:(3500.865986; 6532.753937)
+N(3500.865986; 5315.215437)
+NN:(3500.865986; 5122.587939)
+N(3500.865986; 4175.328735)
+NN:(3500.865986; 5532.587939)
+N(3500.865986; 5122.587939)
+NN:(3500.865986; 5552.006150)
+N(3500.865986; 5122.587939)
+NN:(3500.865986; 6518.908420)
+N(3500.865986; 5552.006150)
+NN:(3500.865986; 7042.358514)
+N(3500.865986; 6518.908420)
+NN:(3500.865986; 8792.358514)
+N(3500.865986; 7042.358514)
+BUFFERED!!!!!!!!!(0.000000; 1678.689965)
+NN:(1678.689965; 3281.999044)
+N(1678.689965; 1678.689965)
+BUFFERED!!!!!!!!!(1678.689965; 3281.999044)
+NN:(3281.999044; 4136.399418)
+N(3281.999044; 3281.999044)
+NN:(3281.999044; 4938.646263)
+N(3281.999044; 4136.399418)
+NN:(3281.999044; 4975.088872)
+N(3281.999044; 4136.399418)
+NN:(3281.999044; 8679.815582)
+N(3281.999044; 4975.088872)
+NN:(3281.999044; 8779.815582)
+N(3281.999044; 8679.815582)
+NN:(3281.999044; 11590.657385)
+N(3281.999044; 8679.815582)
+NN:(3281.999044; 11783.789464)
+N(3281.999044; 11590.657385)
+NN:(3281.999044; 11960.657385)
+N(3281.999044; 11590.657385)
+NN:(3281.999044; 11986.274032)
+N(3281.999044; 11783.789464)
+NN:(3281.999044; 12356.274032)
+N(3281.999044; 11986.274032)
+NN:(3281.999044; 12434.376528)
+N(3281.999044; 12356.274032)
+NN:(3281.999044; 11869.815582)
+N(3281.999044; 8779.815582)
+NN:(3281.999044; 5267.583947)
+N(3281.999044; 4938.646263)
+NN:(3281.999044; 7431.007160)
+N(3281.999044; 5267.583947)
+BUFFERED!!!!!!!!!(0.000000; 360.693776)
+NN:(360.693776; 940.693776)
+N(360.693776; 360.693776)
+NN:(360.693776; 1063.616247)
+N(360.693776; 360.693776)
+NN:(360.693776; 1487.880315)
+N(360.693776; 1063.616247)
+NN:(360.693776; 1427.209426)
+N(360.693776; 1063.616247)
+NN:(360.693776; 4387.880315)
+N(360.693776; 1487.880315)
+NN:(360.693776; 4306.640894)
+N(360.693776; 940.693776)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 30 (include driver)
+# of SGNode 70
+* of SGEdges 300
+# of Two-Pin-Net = 29
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+==> now Priority_CTF (Criticality Threshold Factor) = 1546.19
+max radius in spanning graph = 10669.2 (um)
+add # 14 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #1 U shape
+FLIP EDGE: remove #1 node in OARG
+PUSH EDGE(1): remove #1 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #0 U shape
+FLIP EDGE: remove #0 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 3564.45
+Worst sink delay = 4534.92 (ps)
+
+-------------Slack Analysis-----------
+
+# of violation sink = 14
+WNS (Worst Negative Slack) = -540.89 (ps)
+TNS (Total Negative Slack) = -3840.66 (ps)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+# of violation sink = 14
+WNS (Worst Negative Slack) = -540.89 (ps)
+TNS (Total Negative Slack) = -3840.66 (ps)
+
+--[Reduce Negative Slack by Redirect Mechanism]
+
+--[Part-1]
+
+--[Part-1 end]
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 3564.45
+Worst sink delay = 4534.92 (ps)
+
+# of violation sink = 14
+WNS (Worst Negative Slack) = -540.89 (ps)
+TNS (Total Negative Slack) = -3840.66 (ps)
+# 0
+
+--[Part-2]
+
+============ Redirect Result ============
+Old WNS = -540.89, New WNS¡@= -540.89
+WNS become 100%
+
+--[Part-2 end]
+=================================
+we use the result of # 0 round
+WL when Min WNS = 48240
+Min WNS = -540.89
+WD When Min WNS= 4534.916761 (ps)
+TD When Min WNS= 3564.448947 (ps)
+
+-------------Check Correction-----------
+CHECK CORRECTION is disable!
+
+
+-------------Display WL Result-----------
+
+--[Routing Result :]
+Total SGEdge Length = 44464.3
+Longest Radius = 14973.6
+
+--[Rectilinearizing Result :]
+# of RGEdge = 160
+Total RGEdge Length = 48240
+Longest Radius = 16840
+
+-------------Display Run-Time Result-----------
+Run-time of fileIO = 0
+
+Run-time of building spanning graph = 0
+
+Run-time of assigning slack for each node = 0
+
+SlackBeforePrim Max=-1e+09, Min=1e+09
+
+Run-time of doing prim's algorithm = 0
+
+Times of update in prim's algorithm = 0
+		Run-time of consider obstacle (by r-tree) = 0
+
+Run-time of routing spanning graph = 0
+		more detail 
+		Run-time of generating multi-sources (by r-tree) = 0
+		Run-time of maze routing = 0
+		Run-time of back tracing = 0
+		Run-time of restoring variable = 0
+         TimesOfMaze = 120
+
+Run-time of rectilinearizing spanning edges = 0
+
+Run-time of post processing = 0
+
+Run-time of trunk algo = 0
+
+Run-time of program = 0
+
+Others of program = 0
+
+-------------Write Result to Table-----------
+write table file = Table/table.log

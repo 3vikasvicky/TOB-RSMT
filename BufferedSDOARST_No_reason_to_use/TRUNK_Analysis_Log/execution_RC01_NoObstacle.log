@@ -1,0 +1,15 @@
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+argv[1] = benchOARST_Timing/RC01_T_NoObstacle.net
+argv[2] = Table/table.log
+argv[3] = CapUpperBound.cap
+
+-------------Read file-----------
+Open file = benchOARST_Timing/RC01_T_NoObstacle.net
+Can not open file!

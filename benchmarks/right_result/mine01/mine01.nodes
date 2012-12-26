@@ -1,0 +1,12 @@
+UCLA nodes 1.0
+# Created     : Thu Sep 22 15:12:46 CDT 2011 (date)
+# User        : yzhang1@cerc.utexas.edu (Yilin Zhang)
+# Platform    : Linux eda11 2.6.26-2-amd64 #1 SMP Mon Jun 13 16:29:33 UTC 2011 x86_64 GNU/Linux (uname -a)
+
+NumNodes :          5
+NumTerminals :        0
+        a0           0          0
+        a1           0          0 
+        a2           0          0
+        a3           0          0 
+        a4           0          0 

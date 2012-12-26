@@ -1,0 +1,116 @@
+    /*--------------  Buffering functions      ------------------*/
+list<Point> Design::FindPointsPath(Point child_point, Point point)const{//Find path from child_point to point
+    list<Point> points_list;
+    vector<DTYPE> x_grids;
+    vector<DTYPE> y_grids;
+    map<int, DTYPE> x_grids_map;
+    map<int, DTYPE> y_grids_map;
+    vector<vector<bool> > block_marks;//It is true for only inside block node
+    vector<vector<DIRECTION> > direction_marks;
+    vector<vector<double> > length_marks;
+    vector<vector<bool> > outside_tree_marks;//Marked if it is on(include two end) of an outside tree branch
+    GenerateGrid(x_grids, y_grids, x_grids_map, y_grids_map, block_marks, direction_marks, length_marks, outside_tree_marks);
+    int x_grid = x_grids_map.find(point.x)->second;
+    int y_grid = y_grids_map.find(point.y)->second;
+    int child_x_grid = x_grids_map.find(child_point.x)->second;
+    int child_y_grid = y_grids_map.find(child_point.y)->second;
+    outside_tree_marks[x_grid][y_grid] = true;                
+    length_marks[child_x_grid][child_y_grid] = 0.0;
+    multimap<double, MRP> map_heap;
+    MRP start_mrp;
+    start_mrp.x_grid_ = child_x_grid;
+    start_mrp.y_grid_ = child_y_grid;
+    start_mrp.point_ = child_point; 
+    map_heap.insert(pair<double, MRP>(0, start_mrp));//Only start from the connected outside tree
+    double length_so_far, next_length_so_far;
+    while (!map_heap.empty()){
+        map<double,MRP>::iterator it = map_heap.begin();
+        MRP mrp = it->second;
+        length_so_far = it->first;
+        map_heap.erase(it); 
+        if (outside_tree_marks[mrp.x_grid_][mrp.y_grid_]){//Some times child_point overlap point
+            break;//Is on outside trees and it is not the initial connected nodes
+        }
+        for (int int_direction = RIGHT; int_direction <= DOWN; int_direction++){
+            MRP next_mrp = mrp;
+            DIRECTION direction;
+            if ( int_direction == (int)RIGHT){
+                if (mrp.x_grid_ < x_grids.size()-1){//x_grid_+1
+                    next_mrp.x_grid_ = mrp.x_grid_ + 1;
+                }else{
+                    continue;
+                }
+                direction = RIGHT;
+            }else if (int_direction == (int)LEFT){
+                if (mrp.x_grid_ > 0){
+                    next_mrp.x_grid_ = mrp.x_grid_ - 1; 
+                }else{
+                    continue;
+                }
+                direction = LEFT;
+            }else if (int_direction == (int)UP){
+                if (mrp.y_grid_ < y_grids.size()-1){
+                    next_mrp.y_grid_ = mrp.y_grid_ + 1; 
+                }else{
+                    continue;
+                }
+                direction = UP;
+            }else if (int_direction == (int)DOWN){
+                if (mrp.y_grid_ > 0){
+                    next_mrp.y_grid_ = mrp.y_grid_ - 1; 
+                }else{
+                    continue;
+                }
+                direction = DOWN;
+            }
+            next_mrp.point_ = Point (x_grids.at(next_mrp.x_grid_), y_grids.at(next_mrp.y_grid_));
+            DTYPE step_length = next_mrp.point_.DistanceToPoint(mrp.point_);
+            next_length_so_far = length_so_far + (double)step_length;
+            if (block_marks[next_mrp.x_grid_][next_mrp.y_grid_] || block_marks[mrp.x_grid_][mrp.y_grid_]
+                    || PointIsInBlocks((mrp.point_+next_mrp.point_)/2)){
+                next_length_so_far += LARGEBLOCKFACTOR * step_length;
+            }
+            /*-------------put in next MazeRoutingPoint, or update-------------*/
+            if (length_marks[next_mrp.x_grid_][next_mrp.y_grid_] == 0){//It is connected part
+                continue;
+            }
+            assert(next_length_so_far > 0);
+            if (length_marks[next_mrp.x_grid_][next_mrp.y_grid_] > next_length_so_far){
+                if (length_marks[next_mrp.x_grid_][next_mrp.y_grid_] == FLT_MAX){
+                    map_heap.insert(pair<double,MRP>(next_length_so_far, next_mrp));
+                }else{
+                    map<double,MRP>::iterator it;
+                    for (it = map_heap.begin(); it != map_heap.end(); it++){
+                        if (it->second.IsAtSameGrid(next_mrp)){
+                            break;   
+                        }
+                    }
+                    assert(it != map_heap.end());
+                    map_heap.erase(it);
+                    map_heap.insert(pair<double,MRP>(next_length_so_far, next_mrp));
+                }
+                length_marks[next_mrp.x_grid_][next_mrp.y_grid_] = next_length_so_far;
+                direction_marks[next_mrp.x_grid_][next_mrp.y_grid_] = direction;
+            }
+        }//End of four int_direction loop
+    }// end of while
+    DIRECTION direction = UNTOUCHED, previous_direction = UNTOUCHED;
+    do{
+        //-----------updates childPoint, point, x_grid, y_grid---------------
+        previous_direction = direction;
+        direction  = direction_marks[x_grid][y_grid];
+        Point point = Point (x_grids.at(x_grid), y_grids.at(y_grid));
+        points_list.push_back(point);
+        if (direction == RIGHT){
+            x_grid -= 1;
+        }else if (direction == LEFT){
+            x_grid += 1;
+        }else if (direction == UP){
+            y_grid -= 1;
+        }else if (direction == DOWN){
+            y_grid += 1;
+        }
+    }while (direction != UNTOUCHED);
+    points_list.reverse();//After reverse, the first point is child_point, the last one is point
+    return points_list;
+}

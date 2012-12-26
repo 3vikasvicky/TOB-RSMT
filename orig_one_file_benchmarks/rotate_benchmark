@@ -1,0 +1,88 @@
+#!/bin/env perl
+#require Exporter;
+#our @ISA = {"Exporter"};
+#our @EXPORT_OK = qw{};
+#my $test_file = shift;
+my $test_file = "IND1.inp"
+my @temp = split(/\./,$test_file);
+my $out_file = $temp[0]."_FLIP.".$temp[1];
+my @xcord;
+my @ycord;
+my $i = 0;
+my $j = 0;
+open(INP,$test_file);
+my $no_of_points = <INP>;
+chomp($no_of_points);
+print($no_of_points,"\n");
+for($i=0;$i<$no_of_points;$i++){
+ $line = <INP>;
+ chomp $line;
+ my @temp = split(/\s/,$line);
+ print("x:",$temp[0],"\t","y:",$temp[1],"\n");
+ $xcord[$i] = $temp[0];
+ $ycord[$i] = $temp[1];
+}
+my $no_of_rects = <INP>;
+chomp($no_of_rects);
+for($j=0;$j<$no_of_rects;){
+ $line = <INP>;
+ chomp $line;
+ my @temp = split(/\s/,$line);
+ print("x1: $temp[0] \t y1: $temp[1] \t x2:$temp[2] \t y2:$temp[3] \n");
+ $xcord[$i] = $temp[0];
+ $ycord[$i] = $temp[1];
+ $i++;
+ $xcord[$i] = $temp[2];
+ $ycord[$i] = $temp[3];
+ $i++;
+ $j++;
+}
+$tot_points = $i;
+my $bb_x = 0;
+my $bb_y = 0;
+my $xmax = 0;
+my $ymax = 0;
+my $xmin = 65535;
+my $ymin = 65535;
+my $first;
+my $second;
+for($i=0;$i<$tot_points;$i++){
+  if($xmax < $xcord[$i]){
+    $xmax = $xcord[$i];}
+  if($ymax < $ycord[$i]){
+    $ymax = $ycord[$i];}
+  if($xmin > $xcord[$i]){
+    $xmin = $xcord[$i];}
+  if($ymin > $ycord[$i]){
+    $ymin = $ycord[$i];}
+}
+ $bb_x = $xmax + $xmin;
+ $bb_y = $ymax + $ymin;
+if($tot_points != ($no_of_points + 2 * $no_of_rects)){
+  print("FISHY!!!! tot_points = $tot_points (points:$no_of_points) + 2 * (rects:$no_of_rects)\n");
+  exit;
+}
+print("Bounding Box x coordinate : $bb_x\n");
+print("Bounding Box y coordinate : $bb_y\n");
+close INP;
+my @xcord_flip = "";
+my @ycord_flip = "";
+
+for($i=0;$i<$tot_points;$i++){
+  $xcord_flip[$i] = $bb_x - $xcord[$i];
+  $ycord_flip[$i] = $bb_y - $ycord[$i];
+}
+open(OUT,">$out_file");
+print OUT ("$no_of_points\n");
+for($i=0;$i<$no_of_points;$i++){
+ print OUT ("$xcord_flip[$i] $ycord_flip[$i]\n");
+}
+print OUT ("$no_of_rects\n");
+for($j=0;$j<$no_of_rects;$j++){
+ $second = $i;
+ $first  = $i+1; 
+ print OUT ("$xcord_flip[$first] $ycord_flip[$first] ");
+ print OUT ("$xcord_flip[$second] $ycord_flip[$second]\n");
+ $i = $i + 2;
+}
+close OUT;

@@ -1,0 +1,1003 @@
+Net Example
+UnitCap: 0.000118
+UnitRes: 0.000076
+Number Sinks 199
+Source 0
+  Location (9010, 552)
+  Resistance 0.440000
+  Arr 0.000000
+Sink 1
+  Location (9377,4474)
+  Capacitance 0.001000
+  Req 11.474005
+  Polarity 0
+Sink 2
+  Location (9375,752)
+  Capacitance 0.001000
+  Req 11.438869
+  Polarity 0
+Sink 3
+  Location (9808,1213)
+  Capacitance 0.001000
+  Req 11.542254
+  Polarity 0
+Sink 4
+  Location (9988,5166)
+  Capacitance 0.001000
+  Req 11.877359
+  Polarity 0
+Sink 5
+  Location (9952,5114)
+  Capacitance 0.001000
+  Req 11.911920
+  Polarity 0
+Sink 6
+  Location (9894,6357)
+  Capacitance 0.001000
+  Req 11.981507
+  Polarity 0
+Sink 7
+  Location (9939,9543)
+  Capacitance 0.001000
+  Req 12.066247
+  Polarity 0
+Sink 8
+  Location (9387,9548)
+  Capacitance 0.001000
+  Req 12.076452
+  Polarity 0
+Sink 9
+  Location (9548,1617)
+  Capacitance 0.001000
+  Req 11.531136
+  Polarity 0
+Sink 10
+  Location (9689,123)
+  Capacitance 0.001000
+  Req 11.375446
+  Polarity 0
+Sink 11
+  Location (9810,421)
+  Capacitance 0.001000
+  Req 11.376755
+  Polarity 0
+Sink 12
+  Location (6711,1858)
+  Capacitance 0.001000
+  Req 11.575056
+  Polarity 0
+Sink 13
+  Location (6742,2488)
+  Capacitance 0.001000
+  Req 11.581271
+  Polarity 0
+Sink 14
+  Location (7830,2035)
+  Capacitance 0.001000
+  Req 11.553379
+  Polarity 0
+Sink 15
+  Location (8793,2010)
+  Capacitance 0.001000
+  Req 12.912807
+  Polarity 0
+Sink 16
+  Location (8163,2483)
+  Capacitance 0.001000
+  Req 13.739160
+  Polarity 0
+Sink 17
+  Location (8173,2674)
+  Capacitance 0.001000
+  Req 13.824031
+  Polarity 0
+Sink 18
+  Location (7448,2663)
+  Capacitance 0.001000
+  Req 13.938313
+  Polarity 0
+Sink 19
+  Location (6554,3191)
+  Capacitance 0.001000
+  Req 14.261420
+  Polarity 0
+Sink 20
+  Location (6150,3735)
+  Capacitance 0.001000
+  Req 14.469758
+  Polarity 0
+Sink 21
+  Location (5622,4334)
+  Capacitance 0.001000
+  Req 14.668755
+  Polarity 0
+Sink 22
+  Location (5269,4107)
+  Capacitance 0.001000
+  Req 14.625434
+  Polarity 0
+Sink 23
+  Location (5450,4633)
+  Capacitance 0.001000
+  Req 14.738123
+  Polarity 0
+Sink 24
+  Location (4921,4770)
+  Capacitance 0.001000
+  Req 14.851600
+  Polarity 0
+Sink 25
+  Location (4617,4867)
+  Capacitance 0.001000
+  Req 14.916555
+  Polarity 0
+Sink 26
+  Location (4290,5057)
+  Capacitance 0.001000
+  Req 14.958810
+  Polarity 0
+Sink 27
+  Location (3678,5628)
+  Capacitance 0.001000
+  Req 15.128630
+  Polarity 0
+Sink 28
+  Location (2819,6341)
+  Capacitance 0.001000
+  Req 15.292640
+  Polarity 0
+Sink 29
+  Location (2193,7386)
+  Capacitance 0.001000
+  Req 15.447527
+  Polarity 0
+Sink 30
+  Location (1794,7888)
+  Capacitance 0.001000
+  Req 15.487884
+  Polarity 0
+Sink 31
+  Location (863,9047)
+  Capacitance 0.001000
+  Req 15.549631
+  Polarity 0
+Sink 32
+  Location (461,9356)
+  Capacitance 0.001000
+  Req 15.558067
+  Polarity 0
+Sink 33
+  Location (482,9912)
+  Capacitance 0.001000
+  Req 15.562702
+  Polarity 0
+Sink 34
+  Location (207,9989)
+  Capacitance 0.001000
+  Req 15.563284
+  Polarity 0
+Sink 35
+  Location (438,9263)
+  Capacitance 0.001000
+  Req 15.556049
+  Polarity 0
+Sink 36
+  Location (2735,8148)
+  Capacitance 0.001000
+  Req 15.430610
+  Polarity 0
+Sink 37
+  Location (2287,8842)
+  Capacitance 0.001000
+  Req 15.456699
+  Polarity 0
+Sink 38
+  Location (2089,9207)
+  Capacitance 0.001000
+  Req 15.465208
+  Polarity 0
+Sink 39
+  Location (2086,9157)
+  Capacitance 0.001000
+  Req 15.464572
+  Polarity 0
+Sink 40
+  Location (2243,9847)
+  Capacitance 0.001000
+  Req 15.469342
+  Polarity 0
+Sink 41
+  Location (1703,9379)
+  Capacitance 0.001000
+  Req 15.467380
+  Polarity 0
+Sink 42
+  Location (3211,7073)
+  Capacitance 0.001000
+  Req 15.327935
+  Polarity 0
+Sink 43
+  Location (5625,3803)
+  Capacitance 0.001000
+  Req 14.510409
+  Polarity 0
+Sink 44
+  Location (4534,3859)
+  Capacitance 0.001000
+  Req 14.516771
+  Polarity 0
+Sink 45
+  Location (8062,3287)
+  Capacitance 0.001000
+  Req 13.931794
+  Polarity 0
+Sink 46
+  Location (8116,3603)
+  Capacitance 0.001000
+  Req 13.932318
+  Polarity 0
+Sink 47
+  Location (8018,3601)
+  Capacitance 0.001000
+  Req 14.142553
+  Polarity 0
+Sink 48
+  Location (7385,3274)
+  Capacitance 0.001000
+  Req 14.298350
+  Polarity 0
+Sink 49
+  Location (6762,6061)
+  Capacitance 0.001000
+  Req 14.960972
+  Polarity 0
+Sink 50
+  Location (6577,6861)
+  Capacitance 0.001000
+  Req 15.066114
+  Polarity 0
+Sink 51
+  Location (5926,7269)
+  Capacitance 0.001000
+  Req 15.122765
+  Polarity 0
+Sink 52
+  Location (5575,7503)
+  Capacitance 0.001000
+  Req 15.134684
+  Polarity 0
+Sink 53
+  Location (5536,8032)
+  Capacitance 0.001000
+  Req 15.153036
+  Polarity 0
+Sink 54
+  Location (5630,9676)
+  Capacitance 0.001000
+  Req 15.173352
+  Polarity 0
+Sink 55
+  Location (6078,7611)
+  Capacitance 0.001000
+  Req 15.125563
+  Polarity 0
+Sink 56
+  Location (5946,9567)
+  Capacitance 0.001000
+  Req 15.153144
+  Polarity 0
+Sink 57
+  Location (6123,5331)
+  Capacitance 0.001000
+  Req 15.127651
+  Polarity 0
+Sink 58
+  Location (4156,6611)
+  Capacitance 0.001000
+  Req 15.436771
+  Polarity 0
+Sink 59
+  Location (3729,7037)
+  Capacitance 0.001000
+  Req 15.440099
+  Polarity 0
+Sink 60
+  Location (5445,7181)
+  Capacitance 0.001000
+  Req 15.505529
+  Polarity 0
+Sink 61
+  Location (4848,7696)
+  Capacitance 0.001000
+  Req 15.611629
+  Polarity 0
+Sink 62
+  Location (4423,8220)
+  Capacitance 0.001000
+  Req 15.648818
+  Polarity 0
+Sink 63
+  Location (4132,8458)
+  Capacitance 0.001000
+  Req 15.655217
+  Polarity 0
+Sink 64
+  Location (3649,8531)
+  Capacitance 0.001000
+  Req 15.656786
+  Polarity 0
+Sink 65
+  Location (4090,8887)
+  Capacitance 0.001000
+  Req 15.656259
+  Polarity 0
+Sink 66
+  Location (4543,8514)
+  Capacitance 0.001000
+  Req 15.657388
+  Polarity 0
+Sink 67
+  Location (3638,9710)
+  Capacitance 0.001000
+  Req 15.685593
+  Polarity 0
+Sink 68
+  Location (4453,9000)
+  Capacitance 0.001000
+  Req 15.667648
+  Polarity 0
+Sink 69
+  Location (4906,8055)
+  Capacitance 0.001000
+  Req 15.595425
+  Polarity 0
+Sink 70
+  Location (5106,7978)
+  Capacitance 0.001000
+  Req 15.612331
+  Polarity 0
+Sink 71
+  Location (5187,8901)
+  Capacitance 0.001000
+  Req 15.642575
+  Polarity 0
+Sink 72
+  Location (5208,9830)
+  Capacitance 0.001000
+  Req 15.648245
+  Polarity 0
+Sink 73
+  Location (5133,9550)
+  Capacitance 0.001000
+  Req 15.647670
+  Polarity 0
+Sink 74
+  Location (5082,9770)
+  Capacitance 0.001000
+  Req 15.648072
+  Polarity 0
+Sink 75
+  Location (4815,8806)
+  Capacitance 0.001000
+  Req 15.632239
+  Polarity 0
+Sink 76
+  Location (4894,9049)
+  Capacitance 0.001000
+  Req 15.634207
+  Polarity 0
+Sink 77
+  Location (4606,8892)
+  Capacitance 0.001000
+  Req 15.634333
+  Polarity 0
+Sink 78
+  Location (5274,7188)
+  Capacitance 0.001000
+  Req 15.505430
+  Polarity 0
+Sink 79
+  Location (6115,6114)
+  Capacitance 0.001000
+  Req 15.236955
+  Polarity 0
+Sink 80
+  Location (7412,3374)
+  Capacitance 0.001000
+  Req 14.381657
+  Polarity 0
+Sink 81
+  Location (7602,3701)
+  Capacitance 0.001000
+  Req 14.281728
+  Polarity 0
+Sink 82
+  Location (7565,4594)
+  Capacitance 0.001000
+  Req 14.350828
+  Polarity 0
+Sink 83
+  Location (7552,4919)
+  Capacitance 0.001000
+  Req 14.353066
+  Polarity 0
+Sink 84
+  Location (7151,4758)
+  Capacitance 0.001000
+  Req 14.375352
+  Polarity 0
+Sink 85
+  Location (7238,5865)
+  Capacitance 0.001000
+  Req 14.422892
+  Polarity 0
+Sink 86
+  Location (6823,7256)
+  Capacitance 0.001000
+  Req 14.492976
+  Polarity 0
+Sink 87
+  Location (7104,9635)
+  Capacitance 0.001000
+  Req 14.533897
+  Polarity 0
+Sink 88
+  Location (7836,4477)
+  Capacitance 0.001000
+  Req 14.166473
+  Polarity 0
+Sink 89
+  Location (7868,6028)
+  Capacitance 0.001000
+  Req 14.185344
+  Polarity 0
+Sink 90
+  Location (8354,3881)
+  Capacitance 0.001000
+  Req 13.649029
+  Polarity 0
+Sink 91
+  Location (8429,5873)
+  Capacitance 0.001000
+  Req 13.906666
+  Polarity 0
+Sink 92
+  Location (8665,6684)
+  Capacitance 0.001000
+  Req 13.944994
+  Polarity 0
+Sink 93
+  Location (8648,9185)
+  Capacitance 0.001000
+  Req 14.001144
+  Polarity 0
+Sink 94
+  Location (8853,9456)
+  Capacitance 0.001000
+  Req 14.002610
+  Polarity 0
+Sink 95
+  Location (8863,9430)
+  Capacitance 0.001000
+  Req 14.002575
+  Polarity 0
+Sink 96
+  Location (8492,6682)
+  Capacitance 0.001000
+  Req 13.912987
+  Polarity 0
+Sink 97
+  Location (7708,8070)
+  Capacitance 0.001000
+  Req 14.006373
+  Polarity 0
+Sink 98
+  Location (7697,8483)
+  Capacitance 0.001000
+  Req 14.008201
+  Polarity 0
+Sink 99
+  Location (7454,8363)
+  Capacitance 0.001000
+  Req 14.006076
+  Polarity 0
+Sink 100
+  Location (8259,7047)
+  Capacitance 0.001000
+  Req 13.959240
+  Polarity 0
+Sink 101
+  Location (8815,4146)
+  Capacitance 0.001000
+  Req 13.019783
+  Polarity 0
+Sink 102
+  Location (7316,1086)
+  Capacitance 0.001000
+  Req 12.966390
+  Polarity 0
+Sink 103
+  Location (6092,1102)
+  Capacitance 0.001000
+  Req 13.488602
+  Polarity 0
+Sink 104
+  Location (5527,1709)
+  Capacitance 0.001000
+  Req 14.145447
+  Polarity 0
+Sink 105
+  Location (3634,1560)
+  Capacitance 0.001000
+  Req 14.201692
+  Polarity 0
+Sink 106
+  Location (2692,1543)
+  Capacitance 0.001000
+  Req 14.224912
+  Polarity 0
+Sink 107
+  Location (2455,1733)
+  Capacitance 0.001000
+  Req 14.247566
+  Polarity 0
+Sink 108
+  Location (2473,1940)
+  Capacitance 0.001000
+  Req 14.245141
+  Polarity 0
+Sink 109
+  Location (2152,1872)
+  Capacitance 0.001000
+  Req 14.256933
+  Polarity 0
+Sink 110
+  Location (677,2381)
+  Capacitance 0.001000
+  Req 14.277331
+  Polarity 0
+Sink 111
+  Location (5432,1982)
+  Capacitance 0.001000
+  Req 14.298191
+  Polarity 0
+Sink 112
+  Location (3968,2175)
+  Capacitance 0.001000
+  Req 14.586666
+  Polarity 0
+Sink 113
+  Location (3580,2364)
+  Capacitance 0.001000
+  Req 14.600272
+  Polarity 0
+Sink 114
+  Location (3492,2205)
+  Capacitance 0.001000
+  Req 14.600383
+  Polarity 0
+Sink 115
+  Location (3094,2231)
+  Capacitance 0.001000
+  Req 14.601957
+  Polarity 0
+Sink 116
+  Location (2544,2506)
+  Capacitance 0.001000
+  Req 14.616638
+  Polarity 0
+Sink 117
+  Location (1918,2471)
+  Capacitance 0.001000
+  Req 14.620201
+  Polarity 0
+Sink 118
+  Location (3992,1932)
+  Capacitance 0.001000
+  Req 14.580058
+  Polarity 0
+Sink 119
+  Location (3113,1924)
+  Capacitance 0.001000
+  Req 14.584679
+  Polarity 0
+Sink 120
+  Location (4928,2389)
+  Capacitance 0.001000
+  Req 14.650284
+  Polarity 0
+Sink 121
+  Location (3070,2675)
+  Capacitance 0.001000
+  Req 14.729291
+  Polarity 0
+Sink 122
+  Location (4627,3318)
+  Capacitance 0.001000
+  Req 14.877740
+  Polarity 0
+Sink 123
+  Location (3415,3239)
+  Capacitance 0.001000
+  Req 15.109341
+  Polarity 0
+Sink 124
+  Location (3345,3069)
+  Capacitance 0.001000
+  Req 15.102863
+  Polarity 0
+Sink 125
+  Location (2254,3031)
+  Capacitance 0.001000
+  Req 15.128678
+  Polarity 0
+Sink 126
+  Location (1442,3156)
+  Capacitance 0.001000
+  Req 15.140371
+  Polarity 0
+Sink 127
+  Location (1031,3233)
+  Capacitance 0.001000
+  Req 15.142823
+  Polarity 0
+Sink 128
+  Location (934,3248)
+  Capacitance 0.001000
+  Req 15.142871
+  Polarity 0
+Sink 129
+  Location (3340,3510)
+  Capacitance 0.001000
+  Req 15.120288
+  Polarity 0
+Sink 130
+  Location (2642,3373)
+  Capacitance 0.001000
+  Req 15.169947
+  Polarity 0
+Sink 131
+  Location (1886,3250)
+  Capacitance 0.001000
+  Req 15.222293
+  Polarity 0
+Sink 132
+  Location (1272,3432)
+  Capacitance 0.001000
+  Req 15.237353
+  Polarity 0
+Sink 133
+  Location (1318,3903)
+  Capacitance 0.001000
+  Req 15.275725
+  Polarity 0
+Sink 134
+  Location (1242,4885)
+  Capacitance 0.001000
+  Req 15.295459
+  Polarity 0
+Sink 135
+  Location (1198,4900)
+  Capacitance 0.001000
+  Req 15.295456
+  Polarity 0
+Sink 136
+  Location (534,4321)
+  Capacitance 0.001000
+  Req 15.307634
+  Polarity 0
+Sink 137
+  Location (390,4385)
+  Capacitance 0.001000
+  Req 15.309489
+  Polarity 0
+Sink 138
+  Location (134,4516)
+  Capacitance 0.001000
+  Req 15.310351
+  Polarity 0
+Sink 139
+  Location (269,4779)
+  Capacitance 0.001000
+  Req 15.310836
+  Polarity 0
+Sink 140
+  Location (768,5253)
+  Capacitance 0.001000
+  Req 15.310376
+  Polarity 0
+Sink 141
+  Location (4020,3677)
+  Capacitance 0.001000
+  Req 15.201379
+  Polarity 0
+Sink 142
+  Location (3639,4052)
+  Capacitance 0.001000
+  Req 15.327464
+  Polarity 0
+Sink 143
+  Location (3395,4471)
+  Capacitance 0.001000
+  Req 15.459160
+  Polarity 0
+Sink 144
+  Location (3030,4777)
+  Capacitance 0.001000
+  Req 15.574474
+  Polarity 0
+Sink 145
+  Location (2772,5212)
+  Capacitance 0.001000
+  Req 15.689277
+  Polarity 0
+Sink 146
+  Location (1178,5426)
+  Capacitance 0.001000
+  Req 15.732645
+  Polarity 0
+Sink 147
+  Location (1776,6024)
+  Capacitance 0.001000
+  Req 15.887976
+  Polarity 0
+Sink 148
+  Location (1801,5574)
+  Capacitance 0.001000
+  Req 15.905595
+  Polarity 0
+Sink 149
+  Location (672,5650)
+  Capacitance 0.001000
+  Req 15.935200
+  Polarity 0
+Sink 150
+  Location (826,5923)
+  Capacitance 0.001000
+  Req 15.979190
+  Polarity 0
+Sink 151
+  Location (881,6122)
+  Capacitance 0.001000
+  Req 15.975384
+  Polarity 0
+Sink 152
+  Location (32,6694)
+  Capacitance 0.001000
+  Req 15.990291
+  Polarity 0
+Sink 153
+  Location (1220,6545)
+  Capacitance 0.001000
+  Req 16.013763
+  Polarity 0
+Sink 154
+  Location (1131,6816)
+  Capacitance 0.001000
+  Req 16.031781
+  Polarity 0
+Sink 155
+  Location (704,7439)
+  Capacitance 0.001000
+  Req 16.056930
+  Polarity 0
+Sink 156
+  Location (340,7414)
+  Capacitance 0.001000
+  Req 16.064693
+  Polarity 0
+Sink 157
+  Location (299,7869)
+  Capacitance 0.001000
+  Req 16.067869
+  Polarity 0
+Sink 158
+  Location (65,8084)
+  Capacitance 0.001000
+  Req 16.068807
+  Polarity 0
+Sink 159
+  Location (35,7490)
+  Capacitance 0.001000
+  Req 16.065170
+  Polarity 0
+Sink 160
+  Location (1074,7207)
+  Capacitance 0.001000
+  Req 16.049874
+  Polarity 0
+Sink 161
+  Location (971,7473)
+  Capacitance 0.001000
+  Req 16.056059
+  Polarity 0
+Sink 162
+  Location (721,8309)
+  Capacitance 0.001000
+  Req 16.067093
+  Polarity 0
+Sink 163
+  Location (411,8572)
+  Capacitance 0.001000
+  Req 16.068609
+  Polarity 0
+Sink 164
+  Location (1562,7226)
+  Capacitance 0.001000
+  Req 15.973976
+  Polarity 0
+Sink 165
+  Location (1136,8140)
+  Capacitance 0.001000
+  Req 15.982129
+  Polarity 0
+Sink 166
+  Location (7480,1501)
+  Capacitance 0.001000
+  Req 12.838332
+  Polarity 0
+Sink 167
+  Location (7604,301)
+  Capacitance 0.001000
+  Req 12.533211
+  Polarity 0
+Sink 168
+  Location (4248,1)
+  Capacitance 0.001000
+  Req 12.826213
+  Polarity 0
+Sink 169
+  Location (148,26)
+  Capacitance 0.001000
+  Req 12.902528
+  Polarity 0
+Sink 170
+  Location (5483,221)
+  Capacitance 0.001000
+  Req 12.774437
+  Polarity 0
+Sink 171
+  Location (3099,228)
+  Capacitance 0.001000
+  Req 12.857054
+  Polarity 0
+Sink 172
+  Location (1980,251)
+  Capacitance 0.001000
+  Req 12.865553
+  Polarity 0
+Sink 173
+  Location (2437,391)
+  Capacitance 0.001000
+  Req 12.863805
+  Polarity 0
+Sink 174
+  Location (6404,390)
+  Capacitance 0.001000
+  Req 12.621819
+  Polarity 0
+Sink 175
+  Location (5708,461)
+  Capacitance 0.001000
+  Req 12.652032
+  Polarity 0
+Sink 176
+  Location (3459,398)
+  Capacitance 0.001000
+  Req 12.688481
+  Polarity 0
+Sink 177
+  Location (4209,450)
+  Capacitance 0.001000
+  Req 12.682694
+  Polarity 0
+Sink 178
+  Location (6106,524)
+  Capacitance 0.001000
+  Req 12.626093
+  Polarity 0
+Sink 179
+  Location (7469,757)
+  Capacitance 0.001000
+  Req 12.542346
+  Polarity 0
+Sink 180
+  Location (6923,803)
+  Capacitance 0.001000
+  Req 12.623918
+  Polarity 0
+Sink 181
+  Location (5994,771)
+  Capacitance 0.001000
+  Req 12.740644
+  Polarity 0
+Sink 182
+  Location (5491,1004)
+  Capacitance 0.001000
+  Req 12.842409
+  Polarity 0
+Sink 183
+  Location (4759,1014)
+  Capacitance 0.001000
+  Req 12.948982
+  Polarity 0
+Sink 184
+  Location (3487,844)
+  Capacitance 0.001000
+  Req 13.085353
+  Polarity 0
+Sink 185
+  Location (542,697)
+  Capacitance 0.001000
+  Req 13.201844
+  Polarity 0
+Sink 186
+  Location (12,722)
+  Capacitance 0.001000
+  Req 13.204269
+  Polarity 0
+Sink 187
+  Location (423,1206)
+  Capacitance 0.001000
+  Req 13.204556
+  Polarity 0
+Sink 188
+  Location (41,1236)
+  Capacitance 0.001000
+  Req 13.205579
+  Polarity 0
+Sink 189
+  Location (237,951)
+  Capacitance 0.001000
+  Req 13.203385
+  Polarity 0
+Sink 190
+  Location (3040,955)
+  Capacitance 0.001000
+  Req 13.102301
+  Polarity 0
+Sink 191
+  Location (3145,1107)
+  Capacitance 0.001000
+  Req 13.108635
+  Polarity 0
+Sink 192
+  Location (2703,1150)
+  Capacitance 0.001000
+  Req 13.131101
+  Polarity 0
+Sink 193
+  Location (1528,998)
+  Capacitance 0.001000
+  Req 13.146724
+  Polarity 0
+Sink 194
+  Location (1225,991)
+  Capacitance 0.001000
+  Req 13.147158
+  Polarity 0
+Sink 195
+  Location (1983,1423)
+  Capacitance 0.001000
+  Req 13.144845
+  Polarity 0
+Sink 196
+  Location (1645,1246)
+  Capacitance 0.001000
+  Req 13.147004
+  Polarity 0
+Sink 197
+  Location (1374,1254)
+  Capacitance 0.001000
+  Req 13.148483
+  Polarity 0
+Sink 198
+  Location (8385,1118)
+  Capacitance 0.001000
+  Req 11.952820
+  Polarity 0
+Sink 199
+  Location (8011,197)
+  Capacitance 0.001000
+  Req 11.803691
+  Polarity 0

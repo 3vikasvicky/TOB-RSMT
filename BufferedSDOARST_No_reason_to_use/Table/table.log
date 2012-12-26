@@ -1,0 +1,142 @@
+
+Net benchOARST_Timing/RC01_T.net : # of Pins = 10, # of Obstacle = 10
+== Not Do Redirecting ==
+WD = 3076.540529 (ps)
+WL = 30270.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC1_T.net : # of Pins = 10, # of Obstacle = 10
+== Not Do Redirecting ==
+WD = 3076.540529 (ps)
+WL = 30270.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC2_T.net : # of Pins = 30, # of Obstacle = 10
+== Do Redirecting ==
+Init WD = 4534.916761 (ps)
+Init WL = 48240.000000 (um)
+Init WNS = -540.889761 (ps)
+In # 0 times
+WD When Min WNS= 4534.916761 (ps)
+WL When Min WNS= 48240.000000 (um)
+Min WNS = -540.889761 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC1_T.net : # of Pins = 10, # of Obstacle = 10
+== Not Do Redirecting ==
+WD = 3076.540529 (ps)
+WL = 30270.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC2_T.net : # of Pins = 30, # of Obstacle = 10
+== Do Redirecting ==
+Init WD = 4534.916761 (ps)
+Init WL = 48240.000000 (um)
+Init WNS = -540.889761 (ps)
+In # 0 times
+WD When Min WNS= 4534.916761 (ps)
+WL When Min WNS= 48240.000000 (um)
+Min WNS = -540.889761 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC3_T.net : # of Pins = 50, # of Obstacle = 10
+== Do Redirecting ==
+Init WD = 6896.768266 (ps)
+Init WL = 65620.000000 (um)
+Init WNS = -563.334902 (ps)
+In # 0 times
+WD When Min WNS= 6896.768266 (ps)
+WL When Min WNS= 65620.000000 (um)
+Min WNS = -563.334902 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC4_T.net : # of Pins = 70, # of Obstacle = 10
+== Not Do Redirecting ==
+WD = 5826.929156 (ps)
+WL = 78140.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC5_T.net : # of Pins = 100, # of Obstacle = 10
+== Not Do Redirecting ==
+WD = 6868.218925 (ps)
+WL = 97350.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = 0.000000 (s)
+Run-time of program = 0.000000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC6_T.net : # of Pins = 100, # of Obstacle = 500
+== Not Do Redirecting ==
+WD = 9441.276713 (ps)
+WL = 121633.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = -0.080000 (s)
+Run-time of program = 0.080000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC7_T.net : # of Pins = 200, # of Obstacle = 500
+== Not Do Redirecting ==
+WD = 12658.414744 (ps)
+WL = 177741.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = -0.140000 (s)
+Run-time of program = 0.140000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC8_T.net : # of Pins = 200, # of Obstacle = 800
+== Not Do Redirecting ==
+WD = 13046.714894 (ps)
+WL = 181445.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = -0.300000 (s)
+Run-time of program = 0.300000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC9_T.net : # of Pins = 200, # of Obstacle = 1000
+== Not Do Redirecting ==
+WD = 14826.051890 (ps)
+WL = 178289.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = -0.270000 (s)
+Run-time of program = 0.270000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC10_T.net : # of Pins = 500, # of Obstacle = 100
+== Not Do Redirecting ==
+WD = 15155.726537 (ps)
+WL = 208540.000000 (um)
+WNS = 0 (ps)
+Run-time of post process = -0.060000 (s)
+Run-time of program = 0.060000 (s)
+Others of program (check correction) = 0.000000 (s)
+
+Net benchOARST_Timing/RC11_T.net : # of Pins = 1000, # of Obstacle = 100
+== Do Redirecting ==
+Init WD = 20460.233528 (ps)
+Init WL = 285763.000000 (um)
+Init WNS = -708.372520 (ps)
+In # 1 times
+WD When Min WNS= 20357.671600 (ps)
+WL When Min WNS= 286377.000000 (um)
+Min WNS = -489.235227 (ps)
+Run-time of post process = 0.020000 (s)
+Run-time of program = 0.140000 (s)
+Others of program (check correction) = 0.000000 (s)

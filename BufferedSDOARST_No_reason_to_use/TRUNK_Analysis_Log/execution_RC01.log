@@ -1,0 +1,313 @@
+
+--[Init Parameters of Elmore Delay Model]
+default: unit_r   = 0.076 (ohms/um)
+default: unit_c   = 0.118 (Ff/um)
+default: Rd       = 440  (ohms)
+default: Cloading = 1  (Ff)
+default: Driver's arrival time = 0  (ps)
+
+argv[1] = benchOARST_Timing/RC01_T.net
+argv[2] = Table/table.log
+argv[3] = CapUpperBound.cap
+
+-------------Read file-----------
+Open file = benchOARST_Timing/RC01_T.net
+# of Sink = 9 (not include driver)
+Driver 80 8160 3 0.000000
+10
+
+--[Read Input File]
+# of Obstacles   = 10
+# of Pins        = 10
+(MinX,MinY) = (0,0)
+(MaxX,MaxY) = (9970,9000)
+Buttom Layer Num = 3
+Top    Layer Num = 3
+W of Grid = 100 (just for displaying usage)
+L of Grid = 100 (just for displaying usage)
+
+--[Display Parameters of Elmore Delay Model]
+unit_r   = 0.076 (ohms/um)
+unit_c   = 0.118 (Ff/um)
+Rd       = 440  (ohms)
+Driver's arrival time = 0  (ps)
+Capacitance Upper Bound is 410.000000
+
+-------------init data-----------
+
+--[SortPin]
+--[SortObstacle]
+
+--[Init OASpanningGraph]
+
+--[Create Pins' SGNodes in OASG]
+--[Add Pins' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 10
+
+--[Create Obstacles' SGNodes in OASG]
+--[Add Obstacles' SGNodes in R-Tree]
+--# of SGNodes in R-Tree = 50
+
+--[Start OASG Construction]
+# of Sweep Entry = 50
+Quad1 : handle all nodes' Quad1 (Pos,Pos) Connection (X+Y:Small->Big)
+Quad2 : handle all nodes' Quad2 (Neg,Pos) Connection (Y-X:Small->Big)
+Quad3 : handle all nodes' Quad3 (Neg,Neg) Connection (X+Y:Big->Small)
+Quad4 : handle all nodes' Quad4 (Pos,Neg) Connection (Y-X:Big->Small)
+--[End OASG Construction]
+# of SGEdge = 176
+# of SGEdge = 88 (no dual edges)
+# of SGNode = 50
+
+--[Init Parameters of OARSteinerTree]
+radiusFactor = 1  (range 0 ~ 1, 0 for MST, 1 for SPT)
+searchScale  = 20  (searching range of R-Tree)
+penaltyScale = 10 (2-pin net order)
+
+--[Designate Driving Node of OARSteinerTree]
+Driving SGNode : SGNode Pin (80,8160,3) dist from Driving: 0
+
+==[computeSlackForEachNode]
+BUFFERED!!!!!!!!!(0.000000; 0.000000)
+NN:(0.000000; 1489.462990)
+N(0.000000; 0.000000)
+NN:(0.000000; 3770.848711)
+N(0.000000; 0.000000)
+BUFFERED!!!!!!!!!(0.000000; 3770.848711)
+NN:(3770.848711; 4620.848711)
+N(3770.848711; 3770.848711)
+NN:(3770.848711; 5330.848711)
+N(3770.848711; 3770.848711)
+BUFFERED!!!!!!!!!(3770.848711; 4620.848711)
+NN:(4620.848711; 6180.848711)
+N(4620.848711; 4620.848711)
+BUFFERED!!!!!!!!!(4620.848711; 6180.848711)
+NN:(6180.848711; 8210.848711)
+N(6180.848711; 6180.848711)
+NN:(6180.848711; 8649.937612)
+N(6180.848711; 6180.848711)
+BUFFERED!!!!!!!!!(6180.848711; 8649.937612)
+NN:(8649.937612; 13289.334124)
+N(8649.937612; 8649.937612)
+NN:(8649.937612; 13747.358528)
+N(8649.937612; 8649.937612)
+NN:(8649.937612; 13669.334124)
+N(8649.937612; 13289.334124)
+NN:(8649.937612; 14473.883688)
+N(8649.937612; 13669.334124)
+NN:(8649.937612; 15170.303101)
+N(8649.937612; 14473.883688)
+NN:(8649.937612; 15380.303101)
+N(8649.937612; 15170.303101)
+NN:(6180.848711; 8960.915375)
+N(6180.848711; 8210.848711)
+NN:(6180.848711; 9390.915375)
+N(6180.848711; 8960.915375)
+NN:(6180.848711; 9761.050485)
+N(6180.848711; 9390.915375)
+NN:(6180.848711; 10721.050485)
+N(6180.848711; 9761.050485)
+BUFFERED!!!!!!!!!(0.000000; 1489.462990)
+NN:(1489.462990; 3043.843896)
+N(1489.462990; 1489.462990)
+NN:(1489.462990; 4332.911601)
+N(1489.462990; 1489.462990)
+NN:(1489.462990; 4742.911601)
+N(1489.462990; 4332.911601)
+BUFFERED!!!!!!!!!(1489.462990; 3043.843896)
+NN:(3043.843896; 4273.843896)
+N(3043.843896; 3043.843896)
+NN:(3043.843896; 4911.462701)
+N(3043.843896; 3043.843896)
+BUFFERED!!!!!!!!!(3043.843896; 4911.462701)
+NN:(4911.462701; 5321.462701)
+N(4911.462701; 4911.462701)
+BUFFERED!!!!!!!!!(4911.462701; 5321.462701)
+NN:(5321.462701; 5659.841187)
+N(5321.462701; 5321.462701)
+BUFFERED!!!!!!!!!(5321.462701; 5659.841187)
+NN:(5659.841187; 6363.900844)
+N(5659.841187; 5659.841187)
+BUFFERED!!!!!!!!!(5659.841187; 6363.900844)
+NN:(6363.900844; 6523.900844)
+N(6363.900844; 6363.900844)
+BUFFERED!!!!!!!!!(6363.900844; 6523.900844)
+NN:(6523.900844; 8229.685121)
+N(6523.900844; 6523.900844)
+NN:(6523.900844; 10246.977529)
+N(6523.900844; 6523.900844)
+NN:(6523.900844; 8849.685121)
+N(6523.900844; 8229.685121)
+BUFFERED!!!!!!!!!(3043.843896; 4273.843896)
+NN:(4273.843896; 6633.843896)
+N(4273.843896; 4273.843896)
+BUFFERED!!!!!!!!!(4273.843896; 6633.843896)
+NN:(6633.843896; 7523.394344)
+N(6633.843896; 6633.843896)
+NN:(6633.843896; 7744.249228)
+N(6633.843896; 6633.843896)
+BUFFERED!!!!!!!!!(6633.843896; 7744.249228)
+NN:(7744.249228; 10009.508595)
+N(7744.249228; 7744.249228)
+NN:(7744.249228; 7904.249228)
+N(7744.249228; 7744.249228)
+BUFFERED!!!!!!!!!(7744.249228; 7904.249228)
+NN:(7904.249228; 9633.121693)
+N(7904.249228; 7904.249228)
+NN:(7904.249228; 9698.740799)
+N(7904.249228; 7904.249228)
+NN:(7904.249228; 10024.626552)
+N(7904.249228; 7904.249228)
+NN:(7904.249228; 11194.797480)
+N(7904.249228; 10024.626552)
+NN:(7904.249228; 12527.013679)
+N(7904.249228; 11194.797480)
+NN:(7904.249228; 13113.260407)
+N(7904.249228; 11194.797480)
+NN:(7904.249228; 12737.013679)
+N(7904.249228; 12527.013679)
+NN:(7904.249228; 10270.930441)
+N(7904.249228; 9633.121693)
+NN:(7904.249228; 12509.546085)
+N(7904.249228; 10270.930441)
+NN:(7904.249228; 12759.546085)
+N(7904.249228; 12509.546085)
+NN:(7904.249228; 13229.546085)
+N(7904.249228; 12509.546085)
+NN:(7904.249228; 13479.546085)
+N(7904.249228; 12759.546085)
+NN:(7744.249228; 10859.508595)
+N(7744.249228; 10009.508595)
+NN:(7744.249228; 11289.508595)
+N(7744.249228; 10859.508595)
+NN:(7744.249228; 12701.518367)
+N(7744.249228; 10859.508595)
+
+--[Prim]
+Just do doRefinedPrim()
+--[Refined idea : only trace connected SGNode]
+# of Pin = 10 (include driver)
+# of SGNode 50
+* of SGEdges 176
+# of Two-Pin-Net = 9
+
+-------------Grow trunk-----------
+
+--[Compute Critical Path]
+--[set radius-factor = 1 to sinks to get radius (distance from driver)]
+
+--[compute PriorityCTF]
+--[Apply Elmore delay model to compute sink delay (OASG)]
+==> now Priority_CTF (Criticality Threshold Factor) = 1436.13
+max radius in spanning graph = 13509 (um)
+add # 3 critical sinks
+--[set DPF(Priority) of each sink (radius/max-radius)]
+
+--[GROW TRUNK by our critical sink]
+--[restore data in OASG]
+--[restore radius-factor to original value]
+
+-------------Route OASG-----------
+
+--[RouteSpanningEdge]
+
+--[Compute each sink's distance from driver in OASG]
+
+-------------Build OARG-----------
+
+--[Init OARectilinearGraph]
+
+--[Rectilinearize spanning edge]
+
+--[Remove U shape in OARG]
+PUSH EDGE(2): remove #0 U shape
+PUSH EDGE(2): remove #0 node in OARG
+SMOOTH EDGE: remove #1 edge
+SMOOTH EDGE: remove #1 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #3 U shape
+FLIP EDGE: remove #3 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+FLIP EDGE: remove #0 U shape
+FLIP EDGE: remove #0 node in OARG
+PUSH EDGE(1): remove #0 U shape
+PUSH EDGE(1): remove #0 node in OARG
+SMOOTH EDGE: remove #0 edge
+SMOOTH EDGE: remove #0 node in OARG
+
+--[Compute each sink's distance from driver in OARG]
+
+-------------Timing Analysis-----------
+
+--[Apply Elmore delay model to compute sink delay (OARG)]
+--[re-initialize sink's members]
+
+Average sink delay = 2657.45
+Worst sink delay = 3076.54 (ps)
+
+-------------Slack Analysis-----------
+
+check # of pin = 9
+all meet timing constrain! (16.8438)
+
+-------------Post Processing : Refine Timging-----------
+
+============ WNS and TNS ============
+check # of pin = 9
+all meet timing constrain! (16.8438)
+
+-------------Check Correction-----------
+CHECK CORRECTION is disable!
+
+
+-------------Display WL Result-----------
+
+--[Routing Result :]
+Total SGEdge Length = 29154.7
+Longest Radius = 14884.3
+
+--[Rectilinearizing Result :]
+# of RGEdge = 76
+Total RGEdge Length = 30270
+Longest Radius = 15190
+
+-------------Display Run-Time Result-----------
+Run-time of fileIO = 0
+
+Run-time of building spanning graph = 0
+
+Run-time of assigning slack for each node = 0
+
+SlackBeforePrim Max=-1e+09, Min=1e+09
+
+Run-time of doing prim's algorithm = 0
+
+Times of update in prim's algorithm = 0
+		Run-time of consider obstacle (by r-tree) = 0
+
+Run-time of routing spanning graph = 0
+		more detail 
+		Run-time of generating multi-sources (by r-tree) = 0
+		Run-time of maze routing = 0
+		Run-time of back tracing = 0
+		Run-time of restoring variable = 0
+         TimesOfMaze = 70
+
+Run-time of rectilinearizing spanning edges = 0
+
+Run-time of post processing = 0
+
+Run-time of trunk algo = 0
+
+Run-time of program = 0
+
+Others of program = 0
+
+-------------Write Result to Table-----------
+write table file = Table/table.log
