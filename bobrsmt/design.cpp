@@ -87,6 +87,7 @@ void Design::ReadBlockFile (){
         blocks_.push_back(block);
     }
     original_blocks_ = blocks_;
+    fclose (fp);
 }
 
 void Design::ReformBlock(){//This function keep joining overlapping edges in two adjacent blocks. It can only deal with non-hole situation now
@@ -206,6 +207,7 @@ void Design::ReadBranchFile (){
         nodes_.push_back(node);
         SetXYMinMax (point.x,point.y);
     }
+    fclose (fp);
 }
 void Design::ReformBranch (){
     set<int> index = RemoveZeroLengthBranch();
@@ -244,13 +246,14 @@ void Design::SplitBranch(){
 }
 void Design::DumpTree(const Tree & tree)const{
     FILE * fp;
-    string str("/home/polaris/yzhang1/rebranching/bobrsmt/output/BOBRSMT.out");
+    //string str("/home/polaris/yzhang1/rebranching/bobrsmt/output/BOBRSMT.out");
+    string str("./output/BOBRSMT.out");
     if( (fp=fopen(str.c_str(),"w")) == NULL ) {
         printf("bookshelf_IO: Cannot open: %s file for write", str.c_str());
     }
 
     set<int> indexes = tree.get_indexes();
-    fprintf (fp, "DegreeNumber : %d\n", indexes.size());
+    fprintf (fp, "DegreeNumber : %d\n", (int)(indexes.size()));
     for (set<int>::const_iterator it = indexes.begin(); it != indexes.end();it++) {
         int node_index = *it;
         Node node = nodes_.at(node_index);
@@ -261,6 +264,7 @@ void Design::DumpTree(const Tree & tree)const{
         fprintf(fp, "%d %d %d %d", 
                 node_index, (int)node.point_.x,(int)node.point_.y, parent_node.index_);
     }
+    fclose (fp);
 }
 void Design::PlotAndSave(const Tree& tree)const{//generate line doc for gnu
     return;
@@ -294,7 +298,7 @@ void Design::PlotAndSave(const Tree& tree)const{//generate line doc for gnu
             (double)plot_y_min-0.2*(plot_y_max-plot_y_min)-30, (double)plot_y_max+0.2*(plot_y_max-plot_y_min)+30);
     for (vector<Poly>::const_iterator it2 = blocks_.begin(); it2 != blocks_.end(); ++it2){
         Poly block = *it2;
-        fprintf (fp, "set object %d polygon from ", 1 + it2-blocks_.begin());//from 1
+        fprintf (fp, "set object %d polygon from ", 1 + (int) (it2-blocks_.begin()));//from 1
         for (unsigned int i=0; i<block.Size();++i){
             Point point = block.At(i);
             fprintf (fp, "%f,%f", (double)point.x, (double)point.y);
