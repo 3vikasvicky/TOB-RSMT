@@ -1,9 +1,9 @@
 from gurobipy import *
 
-m = read("/home/polaris/yzhang1/rebranching/bobrsmt/tmp/problem.lp");
+m = read("./tmp/problem.lp");
 m.printStats()
 m.Params.TimeLimit=200
 m.Params.MIPGap=0.0001
 m.optimize();
-m.write("/home/polaris/yzhang1/rebranching/bobrsmt/tmp/problem.sol");
+m.write("./tmp/problem.sol");
 quit
