@@ -142,7 +142,7 @@ public:
     //Include initialize cap, propagate cap and propagate elmore delay
     //Function returns a map of elmore delay,indexes of sinks. Only output is the map and change of nodes_
     map<int,double> CalculateElmore (vector<Node>&)const;
-    double CalculateOutputSlew(const vector<Node> & nodes)const;//Need PropagateCap first
+    //double CalculateOutputSlew(const vector<Node> & nodes)const;//Need PropagateCap first
 
     DirectionalEdge FindFirstLShapeEndPoint(int sink_index, const vector<Node>& nodes)const;//Find the shape of the first L shape from sink to root. If step != 0, it must have at least one L shape. Return the second edge
     DirectionalEdge FindEdge(Point point, const vector<Node> &)const;//Find the edge in the tree that point is on

@@ -422,7 +422,8 @@ void Design::SortAndRecordSlew (){
     for (unsigned int i = 0; i < inside_trees_.size(); ++i){
         inside_trees_[i].InitializeCap(nodes_);
         inside_trees_[i].PropagateCap(nodes_);
-        double output_slew = inside_trees_[i].CalculateOutputSlew(nodes_);
+        //double output_slew = inside_trees_[i].CalculateOutputSlew(nodes_);
+        double output_slew = BETA*slew_spec_;
         map<int,double> elmore_map = inside_trees_[i].CalculateElmore(nodes_);
         map<int,double> slew_map;
         for (map<int,double>::const_iterator it = elmore_map.begin(); it != elmore_map.end(); it++){
@@ -445,7 +446,8 @@ set<int> Design::Legitimate (){
         while (!movable_sinks.empty()){
             inside_trees_[i].InitializeCap(nodes_);
             inside_trees_[i].PropagateCap(nodes_);
-            double output_slew = inside_trees_[i].CalculateOutputSlew(nodes_);
+            //double output_slew = inside_trees_[i].CalculateOutputSlew(nodes_);
+            double output_slew = BETA*slew_spec_;
             map<int,double> elmore_map = inside_trees_[i].CalculateElmore(nodes_);
             map<int,double> slew_map;
             int worst_sink_index;
@@ -1833,7 +1835,8 @@ PossiblePoint Design::AddCombinationChoice(int sink_index, int worst_sink_index,
     }else{
         new_inside_tree.InitializeCap(new_nodes);
         new_inside_tree.PropagateCap(new_nodes);
-        double new_output_slew = new_inside_tree.CalculateOutputSlew(new_nodes);
+        //double new_output_slew = new_inside_tree.CalculateOutputSlew(new_nodes);
+        double new_output_slew = BETA*slew_spec_;
         map<int,double> new_elmore_map = new_inside_tree.CalculateElmore(new_nodes);
         double new_ramp_slew = log(9)*new_elmore_map.find(worst_sink_index)->second;
         possible_point.set_output_slew_increase(new_output_slew-output_slew);
@@ -1851,7 +1854,8 @@ PossiblePoint Design::AddOneSlideChoice(int inside_tree_index, Point new_sink_po
 
     new_inside_tree.InitializeCap(new_nodes);
     new_inside_tree.PropagateCap(new_nodes);
-    double new_output_slew = new_inside_tree.CalculateOutputSlew(new_nodes);
+    //double new_output_slew = new_inside_tree.CalculateOutputSlew(new_nodes);
+    double new_output_slew = BETA*slew_spec_;
     map<int,double> new_elmore_map = new_inside_tree.CalculateElmore(new_nodes);
     double new_ramp_slew = log(9)*new_elmore_map.find(worst_sink_index)->second;
     int block_index = new_inside_tree.get_block_index();

@@ -338,11 +338,13 @@ map<int,double> Tree::CalculateElmore(vector<Node>& nodes)const{//Calculate Elmo
     PropagateElmore(root_delay, root_, nodes, delay_map);
     return delay_map;
 }
+/*
 double Tree::CalculateOutputSlew(const vector<Node> & nodes)const{
     Node root_node = nodes.at(root_);
     double output_slew = root_buffer_.slew_resistance_ *  root_node.ct_ + root_buffer_.intrinsic_slew_;
     return output_slew;
 }
+ */
 
 DirectionalEdge Tree::FindFirstLShapeEndPoint(int sink_index, const vector<Node>& nodes)const{
     list<DirectionalEdge> path_to_root = FindPathToRoot(sink_index, nodes);
