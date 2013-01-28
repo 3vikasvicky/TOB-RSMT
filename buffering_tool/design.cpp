@@ -198,7 +198,7 @@ void Design::PlotAndSave(const vector<Node> & nodes)const{//generate line doc fo
             (double)plot_y_min-0.2*(plot_y_max-plot_y_min)-30, (double)plot_y_max+0.2*(plot_y_max-plot_y_min)+30);
     for (vector<Poly>::const_iterator it2 = blocks_.begin(); it2 != blocks_.end(); ++it2){
         Poly block = *it2;
-        fprintf (fp, "set object %d polygon from ", 1 + it2-blocks_.begin());//from 1
+        fprintf (fp, "set object %d polygon from ", 1 + (int)(it2-blocks_.begin()));//from 1
         for (unsigned int i=0; i<block.Size();++i){
             Point point = block.At(i);
             fprintf (fp, "%f,%f", (double)point.x, (double)point.y);
@@ -235,7 +235,7 @@ void Design::PlotAndSave(const vector<Node> & nodes)const{//generate line doc fo
     }
     //Plot buffers in purple
     list<pair<Point,Buffer> > buffer_locations = best_solution_.get_buffer_locations();
-    printf ("The buffer number is %d\n", buffer_locations.size());
+    printf ("The buffer number is %d\n", (int)(buffer_locations.size()));
     if (buffer_locations.size() !=0 ){
         for (list<pair<Point,Buffer> >::const_iterator buffer_location = buffer_locations.begin(); buffer_location != buffer_locations.end(); ){
             Point buffer_location_point = buffer_location->first;
@@ -425,11 +425,11 @@ set<int> Design::RecognizeSinks(vector<Node>& nodes)const{
     fgets(line, LINESIZE, fp);
     char temp[BUFFERSIZE];
     sscanf(line, "%s\t%*s\n", temp);
-    sscanf(line, "DeltaX\t:\t%d\n", temp);
+    sscanf(line, "DeltaX\t:\t%s\n", temp);
 
     fgets(line, LINESIZE, fp);
     sscanf(line, "%s\t%*s\n", temp);
-    sscanf(line, "Root\t:\t%d\n", temp);
+    sscanf(line, "Root\t:\t%s\n", temp);
 
     fgets(line, LINESIZE, fp);
     sscanf(line, "%s\t%*s\n", temp);
@@ -531,17 +531,19 @@ void Design::PrintCapCt(vector<Node>& nodes)const{
 
 }
 
-void Design::PropagateElmore(double delay, int node_index, const vector<Node>& nodes, map<int,double>& slew_map, map<int,double>& delay_map)const{
+void Design::PropagateElmore(double delay, double slew, int node_index, const vector<Node>& nodes, map<int,double>& slew_map, map<int,double>& delay_map)const{
     Node node = nodes.at(node_index);
     set<int> children =  node.get_children();
 
     if (!children.empty()){//Keep propagating if has children. Sink could have children
         if(node.type_ == Node::SINK){
             delay_map.insert(pair<int,double>(node_index, delay));
+            slew_map.insert(pair<int,double>(node_index, sqrt(slew*slew + BETA*slew_spec_*BETA*slew_spec_)));
         }
         if (node.type_ == Node::BUFFER){
-            slew_map.insert(pair<int,double>(node_index, delay));
+            slew_map.insert(pair<int,double>(node_index, sqrt(slew*slew + BETA*slew_spec_*BETA*slew_spec_)));
             delay += node.buffer_.get_intrinsic_delay();
+            slew = 0;
         }
         for (set<int>::const_iterator it = children.begin(); it != children.end(); it++){
             int child_node_index = *it;
@@ -551,7 +553,8 @@ void Design::PropagateElmore(double delay, int node_index, const vector<Node>& n
             double child_in_cap = child_node.type_==Node::BUFFER?//To get the downstream cap from a little upstream
                 child_node.buffer_.get_input_capacitance():child_node.ct_;
             double child_delay = delay + RUNIT*distance*(0.5*CUNIT*distance + child_in_cap);
-            PropagateElmore(child_delay, child_node_index, nodes, slew_map, delay_map);
+            double child_slew = slew + log(9)*RUNIT*distance*(0.5*CUNIT*distance + child_in_cap);
+            PropagateElmore(child_delay, child_slew, child_node_index, nodes, slew_map, delay_map);
         }
     }else{
         //assert (node.type_ == Node::SINK);
@@ -562,6 +565,6 @@ void Design::CalculateElmore(const vector<Node>& nodes, map<int,double>&slew_map
     //double root_delay = root_buffer_.driving_resistance_ * nodes.at(root_).ct_ + root_buffer_.intrinsic_delay_;
     //double root_delay = 0;//The elmore calculation start from behind of the root driver
     double root_delay = nodes[0].buffer_.get_driving_resistance()*nodes[0].ct_ + nodes[0].buffer_.get_intrinsic_delay();//Only use intrinsic delay
-    PropagateElmore(root_delay, 0, nodes, slew_map, delay_map);
+    PropagateElmore(root_delay, 0, 0, nodes, slew_map, delay_map);
     return;
 }
