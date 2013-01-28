@@ -116,6 +116,12 @@ double Design::PrintTiming(const vector<Node> nodes, double period){
     map<int,double> slew_map, elmore_map;//slew_map for Buffers and elmore_map for sinks
     CalculateElmore(nodes, slew_map, elmore_map);
 
+    for (map<int,double>::const_iterator it=slew_map.begin(); it!=slew_map.end(); ++it){
+        printf ("Slew at Node%d(%d, %d) is %.3e\n", 
+                it->first, nodes.at(it->first).point_.x, nodes.at(it->first).point_.y, it->second);
+		//outfile<<"Delay at Node"<<it->first<<"("<<nodes.at(it->first).point_.x<<", "<<nodes.at(it->first).point_.y<<") is "<<it->second<<endl;
+    }
+
     double tns = 0, wns = 0;
     int worst_sink;
     for (map<int,double>::const_iterator it = elmore_map.begin(); it != elmore_map.end(); it++){

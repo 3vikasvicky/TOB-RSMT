@@ -39,7 +39,8 @@ int main(int argc, char *argv[]){
     design.PlotAndSave(design.get_nodes());
     */
     cout<<"\n-------------omit block least candidates mode buffering-----------\n";
-    design.ContinuousBuffering(OMIT, design.get_nodes());//Irrespective to block. It's better turned into a tree function
+    //design.ContinuousBuffering(OMIT, design.get_nodes());//Irrespective to block. It's better turned into a tree function
+    design.ContinuousBuffering(BOB, design.get_nodes());//Irrespective to block. It's better turned into a tree function
     cout<<"\n-------------Plot the current tree-----------\n";
     //design.PlotAndSave(design.get_nodes());
     cout<<"\n-------------Before improving the timing-----------\n";

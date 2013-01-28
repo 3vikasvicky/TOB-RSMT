@@ -52,7 +52,7 @@ void Buffer::set_cost(double cost){
     cost_ = cost;
 }
 DTYPE Buffer::CalculateLengthLimit(double slew, double capacitance) const{
-    double output_slew = 0;//Initially set to 0, get an upbound of limit_length
+    double output_slew = BETA*slew;
     double elmore_delay = sqrt(slew*slew - output_slew*output_slew)/log(9);
     double a = 0.5*RUNIT*CUNIT;
     // The elmore calculation start right behind the buffer. + driving_resistance_ * CUNIT
@@ -60,6 +60,7 @@ DTYPE Buffer::CalculateLengthLimit(double slew, double capacitance) const{
     //Delay of buffer should not be included for ramp slew
     double c = -elmore_delay;// + driving_resistance_ * capacitance 
     double current_length = ( -b + sqrt (b*b-4*a*c) ) / ( 2 * a );//It's the upbound of length
+    /*
     double up_bound = current_length, low_bound = 0;
     do {
         output_slew = slew_resistance_ * (current_length*CUNIT + capacitance) + intrinsic_slew_;
@@ -75,7 +76,7 @@ DTYPE Buffer::CalculateLengthLimit(double slew, double capacitance) const{
         }
         current_length = 0.5*(low_bound+up_bound);
     }while (up_bound-low_bound>=1);//stop when up_bound is neighbor with low_bound or slew is within 1%
-
+    */
     return (DTYPE) current_length;
 }
 
@@ -235,7 +236,7 @@ vector<Solution> Design::PropagateChildSolutions(int node_index, Point point, in
             for (unsigned int i = 0; i < buffers_.size(); i++){
                 Buffer buffer = buffers_.at(i);
 #ifdef INFO
-                printf ("child solution_point is at %f, %f, new_point is at %f, %f, # of total_solutions now is %d\n", (double)solution_point.x, (double)solution_point.y, (double)point.x, (double)point.y, child_solutions.size());
+                printf ("child solution_point is at %f, %f, new_point is at %f, %f, # of total_solutions now is %d\n", (double)solution_point.x, (double)solution_point.y, (double)point.x, (double)point.y, (int)child_solutions.size());
 #endif
                 //new_solution with a buffer put
                 new_solution.set_c(buffer.get_input_capacitance());
@@ -379,8 +380,8 @@ void Design::UpdateSolutions(Solution new_solution, vector<Solution> & solutions
            return;
            }*/
     }
-    double output_ramp = buffer.get_slew_resistance()*new_solution.get_c() + buffer.get_intrinsic_slew();
-    assert (pow(output_ramp,2) == output_ramp*output_ramp);
+    //double output_ramp = buffer.get_slew_resistance()*new_solution.get_c() + buffer.get_intrinsic_slew();
+    double output_ramp = BETA*slew_spec; 
     if (sqrt(pow(new_solution.get_s(),2) + pow(output_ramp,2)) > slew_spec){
         return;
     }
