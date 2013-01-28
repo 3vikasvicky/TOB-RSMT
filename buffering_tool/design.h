@@ -137,7 +137,7 @@ public:
     void InitializeCap (vector<Node>&)const;//initialize 0 at branch point and Cb at sinks into nodes_
     void PropagateCap (vector<Node>&)const;
     void PrintCapCt(vector<Node>&)const;
-    void PropagateElmore(double delay, int node_index, const vector<Node>& nodes, map<int,double> & slew_map, map<int,double>& delay_map) const;
+    void PropagateElmore(double delay, double slew, int node_index, const vector<Node>& nodes, map<int,double> & slew_map, map<int,double>& delay_map) const;
     //Include initialize cap, propagate cap and propagate elmore delay
     //Function returns a map of elmore delay of sinks, a map of input slew of buffers, and update cap of nodes
     void CalculateElmore (const vector<Node>&, map<int,double>&, map<int,double>&)const;
