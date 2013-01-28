@@ -21,7 +21,8 @@
 //Ff
 #define Cb 0.001
 */
-
+//Beta is used to calculate output slew of a buffer. slew_output = slew_input*BETA <= slew_spec*BETA
+#define BETA 0.8
 //Ff to pf
 #define CUNIT 0.00021
 #define RUNIT 0.38
