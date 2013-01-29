@@ -267,7 +267,7 @@ void Design::DumpTree(const Tree & tree)const{
     fclose (fp);
 }
 void Design::PlotAndSave(const Tree& tree)const{//generate line doc for gnu
-    return;
+    //return;
     set<int> indexes = tree.get_indexes();
     set<int> branches = tree.get_branches();
     if (branches.size() == 0)

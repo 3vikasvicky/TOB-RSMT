@@ -32,8 +32,8 @@ int main(int argc, char *argv[]){
     design.ReadBuffer();
     design.SplitBranch ();
     design.RebuildTree();
-    design.PlotAndSave(design.UniteTreeAndInsideTrees());
-//    design.PlotAndSave(design.UniteInsideTrees());
+    //design.PlotAndSave(design.UniteTreeAndInsideTrees());
+    //design.PlotAndSave(design.UniteInsideTrees());
     design.SortAndRecordSlew();
 
 /*    cout<<"\n-------------omit mode buffering-----------\n";
@@ -72,8 +72,8 @@ int main(int argc, char *argv[]){
 
     design.Clean();
     design.DumpTree(design.UniteTreeAndInsideTrees());
-    design.PlotAndSave(design.get_tree());
-    design.PlotAndSave(design.UniteInsideTrees());
+    //design.PlotAndSave(design.get_tree());
+    //design.PlotAndSave(design.UniteInsideTrees());
     design.PlotAndSave(design.UniteTreeAndInsideTrees());
 /*
     cout<<"\n-------------bobrsmt mode buffering-----------\n";

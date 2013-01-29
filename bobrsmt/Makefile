@@ -10,4 +10,4 @@ roo: main.cpp design.h tree.h geometry.h param.h BinaryHeap.h design.cpp tree.cp
 	$(GG) -g -o roo main.cpp design.cpp tree.cpp geometry.cpp
 
 clean:
-	rm -f *.o core*
+	rm -f *.o core* roo
