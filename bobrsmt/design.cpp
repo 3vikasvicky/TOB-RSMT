@@ -1182,7 +1182,7 @@ vector<vector<PossiblePoint> > Design::FindAllChoices (int inside_tree_index, se
                 start_point = end_point;  
                 continue;
             }
-            int total_segment_number = 1;//divide 10 segments
+            int total_segment_number = 10;//divide 10 segments
             for (int segment_number = 0; segment_number <= total_segment_number; segment_number++){
                 double segment_portion = segment_number/(double)total_segment_number;
                 Point segment_point = current_d_edge.GetProportionPoint(segment_portion);
@@ -1217,7 +1217,7 @@ void Design::WriteToSolver(const vector<vector<PossiblePoint> >& choices_all_sin
             if (!(i==0 && j==0)){
                 fprintf (fp, " + ");
             }
-            fprintf (fp, "%f A_%d_%d", (double)possible_point.get_wirelength_increase(), i, j);
+            fprintf (fp, "%f A_%d_%d", (double)possible_point.get_wirelength_increase()+0.001*(double)possible_point.get_inside_wirelength_decrease(), i, j);
         }
     }
     //(Output_slew + sum_i(sum_j(A_i_j O_i_j)))^2 + (Ramp_slew + sum_i(sum_j(A_i_j R_i_j)))^2 <= spec^2
@@ -1828,6 +1828,8 @@ PossiblePoint Design::AddCombinationChoice(int sink_index, int worst_sink_index,
     possible_point.set_point(Point(0,0));
     possible_point.set_parent_point(Point(0,0));
     possible_point.set_wirelength_increase(distance_to_next_sink + new_wirelength-original_wirelength);
+    //possible_point.set_wirelength_increase(distance_to_next_sink);
+    possible_point.set_inside_wirelength_decrease(original_wirelength - new_wirelength);
     if (sink_index == worst_sink_index){
         possible_point.set_output_slew_increase(-output_slew);//Actually output_slew is not 0. But it is 0 for the calculation of worst sink slew
         possible_point.set_ramp_slew_increase(-worst_ramp_slew);
@@ -1865,6 +1867,8 @@ PossiblePoint Design::AddOneSlideChoice(int inside_tree_index, Point new_sink_po
     possible_point.set_point(new_sink_point);
     possible_point.set_parent_point(new_parent_point);
     possible_point.set_wirelength_increase(distance_to_original_sink + new_wirelength-original_wirelength);
+    //possible_point.set_wirelength_increase(distance_to_original_sink);
+    possible_point.set_inside_wirelength_decrease(original_wirelength - new_wirelength);
     possible_point.set_output_slew_increase(new_output_slew-output_slew);
     double worst_slew = slew_map.find(worst_sink_index)->second;
     double worst_ramp_slew = sqrt(worst_slew*worst_slew - output_slew*output_slew);

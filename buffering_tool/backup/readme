@@ -1,6 +1,0 @@
-Log:
-10/10/2012 Fixed a few bugs in reformBranch function
-
-how to run: roo ../benchmarks/ test01 0.8
-how to gdb: 1) gdb roo 2)r ../benchmarks/ test01 0.8
-how to use pset/pmap etc. in gdb: read ~/.gdbinit(pset sinks_ int)

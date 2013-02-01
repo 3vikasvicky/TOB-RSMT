@@ -76,6 +76,7 @@ class PossiblePoint{//PP is a choice for a moving terminal
     Point point_;
     Point parent_point_;
     DTYPE wirelength_increase_;
+    DTYPE inside_wirelength_decrease_;
     double output_slew_increase_;//This must be non-positive
     double ramp_slew_increase_;//This must be non-positive
 public:
@@ -87,6 +88,8 @@ public:
     Point get_parent_point()const;
     void set_wirelength_increase(DTYPE);
     DTYPE get_wirelength_increase()const;
+    void set_inside_wirelength_decrease(DTYPE);
+    DTYPE get_inside_wirelength_decrease()const;
     void set_output_slew_increase(double);
     double get_output_slew_increase()const;
     void set_ramp_slew_increase(double);

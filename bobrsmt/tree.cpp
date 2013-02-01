@@ -133,6 +133,15 @@ void PossiblePoint::set_wirelength_increase(DTYPE wirelength_increase){
 DTYPE PossiblePoint::get_wirelength_increase()const{
     return wirelength_increase_;
 }
+void PossiblePoint::set_inside_wirelength_decrease(DTYPE inside_wirelength_decrease){
+    if (abs(inside_wirelength_decrease) < EPSILON)
+        inside_wirelength_decrease_ = 0;
+    else
+        inside_wirelength_decrease_ = inside_wirelength_decrease;
+}
+DTYPE PossiblePoint::get_inside_wirelength_decrease()const{
+    return inside_wirelength_decrease_;
+}
 void PossiblePoint::set_output_slew_increase(double output_slew_increase){
     if (abs(output_slew_increase) < EPSILON)
         output_slew_increase_ = 0;
@@ -324,7 +333,12 @@ void Tree::PropagateElmore(double delay, int node_index, const vector<Node>& nod
             Node child_node = nodes.at(child_node_index);
             Edge edge(child_node.point_, node.point_);
             DTYPE distance = edge.Length();
-            double child_delay = delay + RUNIT*distance*(0.5*CUNIT*distance + child_node.ct_);
+            double child_delay = delay;
+            if (node_index == root_){
+                child_delay += (root_buffer_.driving_resistance_ + RUNIT*distance)*(0.5*CUNIT*distance + child_node.ct_);
+            }else{
+                child_delay += RUNIT*distance*(0.5*CUNIT*distance + child_node.ct_);
+            }
             PropagateElmore(child_delay, child_node_index, nodes, delay_map);
         }
     }else{
