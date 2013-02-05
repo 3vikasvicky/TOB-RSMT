@@ -506,6 +506,9 @@ void Design::MazeRouting(const set<int> & all_disconnected_roots){
 Tree Design::get_tree()const{
     return tree_;
 }
+vector<Node> Design::get_nodes()const{
+    return nodes_;
+}
 template <class T>
 T Design::UniteTreeVector(const vector<T>& trees)const{
     T tree;
@@ -1360,9 +1363,11 @@ vector<PossiblePoint> Design::ReadFromSolver(const vector<vector<PossiblePoint> 
             continue;
         }
         pch = strtok (NULL, "_");
-        int i = *pch - '0';
+        //int i = *pch - '0'; pch can be more than 1 digit
+        int i = atoi(pch);
         pch = strtok (NULL, "_");
-        int j = *pch - '0';
+        //int j = *pch - '0';
+        int j = atoi(pch);
         if (type_name == 'A'){
             if (binary_value == 1){
                 vector<PossiblePoint> possible_points_i = all_choices.at(i);
@@ -1924,6 +1929,11 @@ int Design::FindNextTerminalOnBlockBoundary (int inside_tree_index, int step, in
 }
 /*--------------  Fourth level functions      ------------------*/
 void Design::UpdateOneNode(InsideTree& inside_tree, vector<Node>& nodes, Point new_sink_point,Point new_parent_point, int sink_index)const{
+    //find where is the new_parent. This must show before sink move to new position, which creates illegal branch
+    int range_parent_index,range_child_index;
+    inside_tree.FindEdgeIndex(new_parent_point, nodes, &range_parent_index,&range_child_index);
+    DirectionalEdge d_edge = inside_tree.GetBranchEdge(range_child_index, nodes);
+
     //Update the position of sink
     Node node = nodes.at(sink_index);
     Point old_sink_point = node.point_;
@@ -1933,9 +1943,7 @@ void Design::UpdateOneNode(InsideTree& inside_tree, vector<Node>& nodes, Point n
     int old_parent_index = node.parent_;
     inside_tree.RemoveChildNode(nodes, old_parent_index, sink_index);
 
-    int range_parent_index,range_child_index;
-    inside_tree.FindEdgeIndex(new_parent_point, nodes, &range_parent_index,&range_child_index);
-    DirectionalEdge d_edge = inside_tree.GetBranchEdge(range_child_index, nodes);
+    //Update the new_parent
     if (new_parent_point != d_edge.get_start_point() && new_parent_point != d_edge.get_end_point()){
         Node new_parent_node = inside_tree.InsertNewNode(range_parent_index, range_child_index, new_parent_point, nodes);
         int new_parent_index = new_parent_node.index_;

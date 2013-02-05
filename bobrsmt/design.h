@@ -77,6 +77,7 @@ public:
     set<int> Legitimate ();
     void MazeRouting(const set<int>& all_disconnected_nodes);
     Tree get_tree()const;
+    vector<Node> get_nodes()const;
     Tree UniteInsideTrees()const;
     Tree UniteTreeAndInsideTrees()const;
     void Clean();

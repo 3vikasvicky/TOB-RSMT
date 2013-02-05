@@ -75,6 +75,7 @@ int main(int argc, char *argv[]){
     //design.PlotAndSave(design.get_tree());
     //design.PlotAndSave(design.UniteInsideTrees());
     design.PlotAndSave(design.UniteTreeAndInsideTrees());
+    cout<< "Total WL is "<< design.UniteTreeAndInsideTrees().CalculateTotalWirelength(design.get_nodes())<< endl;
 /*
     cout<<"\n-------------bobrsmt mode buffering-----------\n";
     clock_t bob_mode_buffering_start = clock();
